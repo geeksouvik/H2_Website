@@ -20,9 +20,10 @@
 </div>
 
 
+{% for update in updates%}
 
-<marquee direction="right" style="color: cornsilk;">Updates : <a style="color: aliceblue;" href="">Click here to check the latest IPL Fanatasy League.</a></marquee>
-
+<marquee direction="right" style="color: cornsilk;">Updates : <a style="color: aliceblue;" href="">{{update.name}}</a></marquee>
+{% endfor %}
 <div class="container">
   <div class="animate two">
     <span>a</span><span>b</span><span>o</span><span>u</span><span>t</span> &nbsp;

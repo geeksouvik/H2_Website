@@ -1,5 +1,10 @@
 from django.db import models
 
+class Updates(models.Model):
+    name = models.CharField(max_length=150,primary_key=True,default = 'No New Update')
+    def __str__(self):
+        return self.name
+
 class Legend_Category(models.Model):
     name = models.CharField(max_length=150,primary_key=True)
     id = models.CharField(max_length=10)

@@ -17,7 +17,9 @@ def base(request):
 
 
 def home(request):
-    return render(request, 'hostel2/homenew.html')
+    updates = Updates.objects.all()
+    context = {'updates':updates}
+    return render(request, 'hostel2/homenew.html',context)
 
 def gallery(request):
     return render(request, 'hostel2/gallery.html')
