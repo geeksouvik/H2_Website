@@ -4,9 +4,14 @@ body,
 			padding: 0;
 			height: 100%;
     font-family: cursive;
-    background-image: url("hostel2\static\hostel2\Images\bg.jpg");
+  background: url("Images/Among_trees_5.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     color: aquamarine;
 		}
+
+
 		.user_card {
 			width: 350px;
 			margin-top: auto;

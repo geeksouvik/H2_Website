@@ -1,11 +1,16 @@
-body,html {
+body,
+		html {
 			margin: 0;
 			padding: 0;
 			height: 100%;
-                font-family: cursive;
-    background-image: url("hostel2/static/hostel2/Images/bg.jpg");
+    font-family: cursive;
+  background: url("Images/Among_trees_3.jpg") 100% fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     color: aquamarine;
 		}
+
 		.user_card {
 			width: 350px;
 			margin-top:20vh;
