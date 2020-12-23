@@ -12,13 +12,15 @@ section{
          background-size: cover;
          background-attachment: fixed;
   }
-
+video{
+	object-fit: cover;
 }
 h1{
 	margin: 0;
 	padding: 0;
 	position: absolute;;
 	top: 50%;
+	transform: translateY(-50%);
 	width: 100%;
 	text-align: center;;
 	color: #ddd;
@@ -28,11 +30,10 @@ h1{
 	letter-spacing: 0.01em;
 }
 h1 span{
-	opacity: 0;
+	opacity: 1;
 	display: inline-block;
+	animation: animate 1s linear forwards;
 }
-
-
 .buttons {
   display: flex;
   flex-direction: row;
