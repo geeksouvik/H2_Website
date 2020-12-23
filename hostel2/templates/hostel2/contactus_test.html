@@ -1,0 +1,503 @@
+{% extends "hostel2/base.html" %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'hostel2/style.css'%}">
+
+{% endblock head %}
+
+{% block body %}
+
+<div class ="heading">
+<h1>Hostel 2 Council 2020-21</h1>
+<div class="dropdown2">
+  <button class="dropbtn2">Older H2 Councils &#11206;</button>
+  <div class="dropdown2-content">
+  <a href="#">2019-2020</a>
+  <a href="#">2018-2019</a>
+  </div>
+</div>
+</div>
+
+
+<div class="arrow">
+<span class="previous round" onclick="plusSlides(-1)">&#10094;</span>
+<span class="next round" onclick="plusSlides(1)">&#10095;</span>
+</div>
+
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:gold; background-color:black; border: 2px solid gold;">Administration Body</h2>
+{% for admin in admin_council %}
+  {% if admin.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card1">
+        <img src={{admin.picture.url}}>
+        <div class="container">
+          <h2>{{ admin.name }}</h2>
+          <p class="title">&nbsp;{{admin.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{admin.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{admin.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{admin.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif admin.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card1">
+        <img src={{admin.picture.url}}>
+        <div class="container">
+          <h2>{{ admin.name }}</h2>
+          <p class="title">&nbsp;{{admin.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{admin.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{admin.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{admin.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card1">
+        <img src={{admin.picture.url}}>
+        <div class="container">
+          <h2>{{ admin.name }}</h2>
+          <p class="title">&nbsp;{{admin.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{admin.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{admin.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{admin.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:magenta; background-color:black; border: 2px solid magenta;">Web Council</h2>
+{% for web in web_council %}
+  {% if web.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card2">
+        <img src={{web.picture.url}}>
+        <div class="container">
+          <h2>{{ web.name }}</h2>
+          <p class="title">&nbsp;{{web.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{web.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{web.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{web.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif web.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card2">
+        <img src={{web.picture.url}}>
+        <div class="container">
+          <h2>{{ web.name }}</h2>
+          <p class="title">&nbsp;{{web.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{web.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{web.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{web.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card2">
+        <img src={{web.picture.url}}>
+        <div class="container">
+          <h2>{{ web.name }}</h2>
+          <p class="title">&nbsp;{{web.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{web.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{web.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{web.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:dodgerblue; background-color:black; border: 2px solid dodgerblue;">Technical Council</h2>
+{% for tech in tech_council %}
+  {% if tech.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card3">
+        <img src={{tech.picture.url}}>
+        <div class="container">
+          <h2>{{ tech.name }}</h2>
+          <p class="title">&nbsp;{{tech.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{tech.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{tech.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{tech.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif tech.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card3">
+        <img src={{tech.picture.url}}>
+        <div class="container">
+          <h2>{{ tech.name }}</h2>
+          <p class="title">&nbsp;{{tech.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{tech.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{tech.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{tech.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card3">
+        <img src={{tech.picture.url}}>
+        <div class="container">
+          <h2>{{ tech.name }}</h2>
+          <p class="title">&nbsp;{{tech.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{tech.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{tech.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{tech.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:orange; background-color:black; border: 2px solid orange;">Mess Council</h2>
+{% for mess in mess_council %}
+  {% if mess.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card4">
+        <img src={{mess.picture.url}}>
+        <div class="container">
+          <h2>{{ mess.name }}</h2>
+          <p class="title">&nbsp;{{mess.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{mess.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{mess.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{mess.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif mess.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card4">
+        <img src={{mess.picture.url}}>
+        <div class="container">
+          <h2>{{ mess.name }}</h2>
+          <p class="title">&nbsp;{{mess.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{mess.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{mess.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{mess.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card4">
+        <img src={{mess.picture.url}}>
+        <div class="container">
+          <h2>{{ mess.name }}</h2>
+          <p class="title">&nbsp;{{mess.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{mess.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{mess.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{mess.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:red; background-color:black; border: 2px solid red;">Maintenance Council</h2>
+{% for maint in maint_council %}
+  {% if maint.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card5">
+        <img src={{maint.picture.url}}>
+        <div class="container">
+          <h2>{{ maint.name }}</h2>
+          <p class="title">&nbsp;{{maint.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{maint.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{maint.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{maint.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif maint.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card5">
+        <img src={{maint.picture.url}}>
+        <div class="container">
+          <h2>{{ maint.name }}</h2>
+          <p class="title">&nbsp;{{maint.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{maint.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{maint.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{maint.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card5">
+        <img src={{maint.picture.url}}>
+        <div class="container">
+          <h2>{{ maint.name }}</h2>
+          <p class="title">&nbsp;{{maint.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{maint.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{maint.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{maint.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:lime; background-color:black; border: 2px solid lime;">Sports Council</h2>
+{% for sports in sports_council %}
+  {% if sports.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card6">
+        <img src={{sports.picture.url}}>
+        <div class="container">
+          <h2>{{ sports.name }}</h2>
+          <p class="title">&nbsp;{{sports.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{sports.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{sports.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{sports.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif sports.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card6">
+        <img src={{sports.picture.url}}>
+        <div class="container">
+          <h2>{{ sports.name }}</h2>
+          <p class="title">&nbsp;{{sports.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{sports.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{sports.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{sports.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card6">
+        <img src={{sports.picture.url}}>
+        <div class="container">
+          <h2>{{ sports.name }}</h2>
+          <p class="title">&nbsp;{{sports.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{sports.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{sports.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{sports.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:hotpink; background-color:black; border: 2px solid hotpink;">Cultural Council</h2>
+{% for cult in cult_council %}
+  {% if cult.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card7">
+        <img src={{cult.picture.url}}>
+        <div class="container">
+          <h2>{{ cult.name }}</h2>
+          <p class="title">&nbsp;{{cult.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{cult.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{cult.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{cult.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif cult.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card7">
+        <img src={{cult.picture.url}}>
+        <div class="container">
+          <h2>{{ cult.name }}</h2>
+          <p class="title">&nbsp;{{cult.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{cult.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{cult.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{cult.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card7">
+        <img src={{cult.picture.url}}>
+        <div class="container">
+          <h2>{{ cult.name }}</h2>
+          <p class="title">&nbsp;{{cult.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{cult.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{cult.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{cult.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="mySlides myfade">
+  <h2 style="text-align:center; margin:2vw; color:brown; background-color:black; border: 2px solid brown;">Events Council</h2>
+{% for events in events_council %}
+  {% if events.councillor %}
+      <div class="row">
+        <div class="columnX">
+        <div class="card8">
+        <img src={{events.picture.url}}>
+        <div class="container">
+          <h2>{{ events.name }}</h2>
+          <p class="title">&nbsp;{{events.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{events.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{events.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{events.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% elif events.left %}
+      <div class="row">
+        <div class="column">
+        <div class="card8">
+        <img src={{events.picture.url}}>
+        <div class="container">
+          <h2>{{ events.name }}</h2>
+          <p class="title">&nbsp;{{events.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{events.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{events.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{events.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+  {% else %}
+        <div class="column">
+        <div class="card8">
+        <img src={{events.picture.url}}>
+        <div class="container">
+          <h2>{{ events.name }}</h2>
+          <p class="title">&nbsp;{{events.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; </b>{{events.email}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; </b>{{events.contactno}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; </b>{{events.roomno}}</p>
+          <p><button class="button"><a href="http://www.idc.iitb.ac.in/sandesh/bio.html"/> Contact </a></button></p>
+        </div>
+    </div>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+</div>
+
+
+<div class="arrow">
+<span class="previous round" onclick="plusSlides(-1)">&#10094;</span>
+<span class="next round" onclick="plusSlides(1)">&#10095;</span>
+<div style="text-align:center">
+  <span class="dot2" onclick="currentSlide(1)"></span>
+  <span class="dot2" onclick="currentSlide(2)"></span>
+  <span class="dot2" onclick="currentSlide(3)"></span>
+  <span class="dot2" onclick="currentSlide(4)"></span>
+  <span class="dot2" onclick="currentSlide(5)"></span>
+  <span class="dot2" onclick="currentSlide(6)"></span>
+  <span class="dot2" onclick="currentSlide(7)"></span>
+  <span class="dot2" onclick="currentSlide(8)"></span>
+</div>
+</div>
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  location.href="contactus_test.html";
+  }
+
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var dots2 = document.getElementsByClassName("dot2");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      dots2[i].className = dots2[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  dots2[slideIndex-1].className += " active";
+  }
+  </script>
+
+{%  endblock body %}

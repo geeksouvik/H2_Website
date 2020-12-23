@@ -1,0 +1,77 @@
+{% extends "hostel2/base.html" %}
+ {% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'hostel2/legend.css'%}">
+
+ {% endblock head %}
+
+{% block body %}
+
+  <div>
+    <h1 id="head"> Legends </h1>
+    <h4 id="subhead">We feel like we have to put on for our city , because we have so many legends and so many greats.
+      </h3>
+
+
+      {% for category in all_categorys %}
+      <p class="button mx-auto streched-link" id={{category.id}} onclick="overlayClicked(this.id)">{{category}}</p><br>
+
+
+
+      <div class={{category.id}} id={{category.id}} onclick="off(this.id)">
+        <div class="expanded">
+          <table class="table table-hover ">
+            <tr class="f">
+              <th>Name</th>
+              <th>Year</th>
+            </tr>
+           {% for legend in all_legends %}
+           {% if legend.type == category %}
+            <tr>
+              <td>{{ legend.name }}</td>
+              <td>{{ legend.year }}</td>
+            </tr>
+
+           {% endif %}
+           {% endfor %}
+          </table>
+            </div>
+      </div>
+
+
+      {% endfor %}
+
+
+  </div>
+
+
+  <!--- Footer -->
+  <div class="footer">
+  <footer>
+    <p style="text-align: center; font-weight: bolder;">&copy; 2020 <strong><em><a href="#"
+            style="font-weight: bolder;">Hostel 2, IIT Bombay.
+          </a></em></strong> </p>
+  </footer>
+</div>
+
+
+  <script>
+    function overlayClicked(click) {
+      var x = String(click)
+      console.log(x)
+      document.getElementsByClassName(click)[0].style.display = "block";
+      document.getElementsByClassName("footer")[0].style.display = "none"
+    }
+
+    function off(turn) {
+      var x = String(turn)
+      console.log(x)
+      document.getElementsByClassName(turn)[0].style.display = "none";
+      document.getElementsByClassName("footer")[0].style.display = "block"
+    }
+  </script>
+
+
+
+
+{% endblock body %}

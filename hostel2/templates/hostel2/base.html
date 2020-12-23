@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hostel 2, IIT Bombay</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ {% block head %}
+ {% endblock head %}
+</head>
+<body id="bg">
+<nav class="navbar navbar-expand-lg navbar-sticky navbar-dark mb-3" style="background:#FF6347; border-radius: 0.8em; top: 0.6vh; left: 0.6vw;
+    z-index: 100; ">
+        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:white;">
+            <span class="navbar-toggler-icon" style="color:white;"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                </li>
+                <li id="dropdown2" class="nav-item dropdown2 ">
+                    <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'legend' %}">Legends</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://gymkhana.iitb.ac.in/~hostel2/certificate.php">E-Certificates</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'contactus' %}">Council</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item ">
+                   <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                <li class="nav-item ">
+                   <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item ">
+                   <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+   {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div> 
+        {% endfor %}
+    {% endif %}
+{% block body %}
+{% endblock body %}
+</body>
+</html>

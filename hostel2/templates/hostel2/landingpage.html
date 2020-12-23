@@ -1,0 +1,41 @@
+{% extends "hostel2/base.html" %}
+ {% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'hostel2/button.css'%}">
+<link rel="stylesheet" href="{% static 'hostel2/stylesmoke.css'%}">
+ {% endblock head %}
+
+
+{% block body %}
+
+<div id="bg">
+
+      <h1 style="color: white; font-family: serif; font-size: 68px;text-align: center;">
+        <img src="{% static 'hostel2/icon.jpeg'%}" width="80" height="80" >
+        <span>T</span>
+        <span>h</span>
+        <span>e</span> &nbsp;
+        <span>W</span>
+        <span>i</span>
+        <span>l</span>
+        <span>d</span> &nbsp;
+        <span>O</span>
+        <span>n</span>
+        <span>e</span>
+        <span>s</span>
+
+<br>
+<br>
+        <div class="buttons">
+                <a href="{% url 'home_page' %}" class="btn effect01" ><span>Home</span></a>
+            </div>
+          </div>
+
+      </h1>
+
+
+    </div>
+
+
+
+{% endblock body %}

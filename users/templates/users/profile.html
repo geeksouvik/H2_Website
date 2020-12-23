@@ -1,0 +1,40 @@
+  
+{% extends "hostel2/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block body %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'users/profile.css' %}">
+
+
+<div class="container"> <section class="profile_container">
+  <div class="profile_img_section">
+    <img class="profile_img-LG" src="{{ user.profile.image.url }}" />
+  </div>
+
+  <div class="profile_desc_section">
+    <h2 style="font-weight: bolder; font-family: Lucida Calligraphy; font-size: 50px; color: rgb(241, 226, 8);">{{ user.username }}</h2>
+    <h3 style="font-weight: bolder; color: aqua"><b>Email: &nbsp; </b>{{ user.email }}</h3>
+    <h3 style="font-weight: bolder; color: aqua;"><b>Roll No: &nbsp; </b>{{ user.profile.roll_no }}</h3>
+    <h3 style="font-weight: bolder; color: aqua;"><b>Room No: &nbsp; </b>{{ user.profile.room_no }}</h3>
+
+    <p class="description" style="background-color: aqua;
+                                  border-radius: 5px; padding: 5px 15px;
+                                  margin-right: 7.5px;
+                                  margin-bottom: 10px;
+                                  color: rgb(2, 83, 83);">
+                                  {{ user.profile.interests }}</p>
+    
+    <h3 style="font-weight: bolder; color: aqua;"><b>GC Participation: &nbsp; </b>{{ user.profile.gc_participation }}</h3>
+    </div>
+
+
+</section>
+<hr>
+<div class="container">
+  <a class="btn btn-outline-success" href="{% url 'profile_update' %}">Edit Profile</a>
+</div>
+</div>
+ 
+
+ {% endblock body %}

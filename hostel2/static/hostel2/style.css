@@ -1,0 +1,546 @@
+
+body
+{
+  background-image: url(Images/Among_trees_8.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+html {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+.heading h1
+{
+  text-align: center;
+  text-shadow: 3.5px 3.5px grey;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  font-size: 70px;
+  color: white;
+  padding-left: 1px;
+  padding-right: 1px;
+  display: inline-block;
+}
+@media screen and (max-width:500px)
+{
+  .heading h1{
+    font-size:60px;
+  }
+}
+h2
+{
+  font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+}
+p{
+  margin-top: 0px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.columnX
+{
+  margin:auto;
+  width: 50%;
+  padding: 20px 20px;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  .columnX {
+    width: 100%;
+    display: block;
+  }
+}
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8{
+  background-repeat: no-repeat;
+  background-position: -400px 0, 0 0;
+
+  background-image: -webkit-linear-gradient(
+    top left,
+    rgba(100, 100, 100, 0.2) 0%,
+    rgba(100, 100, 100, 0.2) 37%,
+    rgba(100, 100, 100, 0.8) 45%,
+    rgba(100, 100, 100, 0.0) 50%
+  );
+  background-image: -moz-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-image: -o-linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-image: linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+
+  -moz-background-size: 250% 250%, 100% 100%;
+       background-size: 250% 250%, 100% 100%;
+
+  -webkit-transition: background-position 0s ease;
+     -moz-transition: background-position 0s ease;
+       -o-transition: background-position 0s ease;
+          transition: background-position 0s ease;
+}
+
+.card1:hover,.card2:hover,.card3:hover,.card4:hover,.card5:hover,.card6:hover,.card7:hover,.card8:hover {
+  background-position: 0 0, 0 0;
+
+  -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid gold;
+  padding: 10px;
+  background-image: linear-gradient(to left,black,rgb(80,80,80),rgb(40,40,40));
+  color: gold;
+  transition: 0.2s ease-in-out;
+}
+.card1 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid gold;
+  margin: 20px;
+  transition: 0.2s ease-in-out;
+}
+.card1:hover,.card2:hover,.card3:hover,.card4:hover,.card5:hover,.card6:hover,.card7:hover,.card8:hover
+{
+  border: 3px solid moccasin;
+  box-shadow: 20px 20px 12px 0 rgba(0, 0, 0, 0.5);
+}
+.card1:hover img, .card2:hover img,.card3:hover img,.card4:hover img,.card5:hover img,.card6:hover img,.card7:hover img,.card8:hover img{
+  border: 3px solid moccasin;
+}
+
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid deepskyblue;
+  padding: 10px;
+  background-image: linear-gradient(to left,midnightblue,dodgerblue,mediumblue);
+  color: powderblue;
+}
+.card3 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid powderblue;
+  margin: 20px;
+}
+.card6 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid mediumseagreen;
+  padding: 10px;
+  background-image: linear-gradient(to left,darkgreen,rgb(20,220,20),green);
+  color: palegreen;
+}
+.card6 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid palegreen;
+  margin: 20px;
+}
+.card5 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid red;
+  padding: 10px;
+  background-image: linear-gradient(to left,rgb(100,0,0),red,darkred);
+  color: lightsalmon;
+}
+.card5 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid lightsalmon;
+  margin: 20px;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid darkorchid;
+  padding: 10px;
+  background-image: linear-gradient(to left,indigo,mediumorchid,indigo);
+  color: pink;
+}
+.card2 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid pink;
+  margin: 20px;
+}
+.card4 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid orange;
+  padding: 10px;
+  background-image: linear-gradient(to left,rgb(255,30,0),gold,rgb(255,40,0));
+  color: crimson;
+}
+.card4 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid crimson;
+  margin: 20px;
+}
+.card7 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid deeppink;
+  padding: 10px;
+  background-image: linear-gradient(to left,maroon,deeppink,maroon);
+  color: pink;
+}
+.card7 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid pink;
+  margin: 20px;
+}
+.card8 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 3px solid brown;
+  padding: 10px;
+  background-image: linear-gradient(to left,maroon,sandybrown,brown);
+  color: pink;
+}
+.card8 img
+{
+  height: 200px;
+  width: 200px;
+  float: left;
+  border-radius: 500px;
+  border: 3px solid brown;
+  margin: 20px;
+}
+@media screen and (max-width: 1078px) and (min-width: 650px), (max-width: 532px){
+  .card1 img,.card2 img,.card3 img,.card4 img,.card5 img,.card6 img,.card7 img,.card8 img
+  {
+     float: none;
+     display:block;
+     margin:auto;
+  }
+}
+.container {
+  padding: 0px 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: moccasin;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.button {
+  font-family: Arial;
+  font-weight: bolder;
+  font-size: 1em;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 7.5px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.mySlides {display: none}
+
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0vw 1vw 1vw 0vw;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  vertical-align: middle;
+}
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 3vw 1vw 3vw 0vw;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  vertical-align: middle;
+}
+
+
+.myfade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.arrow{
+  /*background-image: url(Pictures/X2a.jpg), url(Pictures/X3a.jpg);
+  background-position: left,right;
+  background-color: black;
+  background-repeat: no-repeat,no-repeat;
+  background-size: contain;
+  color: white;*/
+  border-radius: 200px;
+}
+.next:hover, .previous:hover {
+  background-color: grey;
+  color: black;
+}
+.previous {
+  text-decoration: none;
+  display: inline-block;
+  padding: 17px 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  background-color: lemonchiffon;
+  color: black;
+  margin-left: 2vw;
+  vertical-align: middle;
+}
+
+.next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 17px 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  background-color: lemonchiffon;
+  color: black;
+  float: right;
+  margin-right: 2vw;
+  vertical-align: middle;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: 15px;
+    display: block;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    border-bottom: solid #479BBE;
+    border-radius: 0.5em;
+    color: black !important;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-link:hover {
+  background:#479BBE !important;
+  color: white;
+  border-color:  #479BBE;
+}
+
+.dropdown2:hover>.dropdown-content {
+    position: relative;
+    display: block;
+    padding: 0.2em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0F111B ;
+    top: 10px;
+    left: 40px;
+    z-index: 1;
+    padding-top: 0;
+    min-width: 120px;
+    border: rgb(1, 173, 237) solid 1.5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 991px){
+.dropdown-content {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: rgb(243, 29, 29);
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-top: 31em;
+  margin-bottom: 0em;
+  color: black;
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  box-shadow: 5px 3px 8.37px rgba(193,93,79,.2);
+}
+
+footer a:link, footer a:visited {
+  color: white;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color:  #479BBE;
+}
+
+footer a:hover {
+  color:  #479BBE;
+  text-decoration-color: white;
+}
+.dropbtn2 {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-top: 4.4vh;
+  padding-bottom: 4.4vh;
+}
+
+.dropdown2 {
+  position: relative;
+ float: right;
+}
+
+ .heading{
+    background-color: black;
+    border-top: 2px solid lightcyan;
+    border-bottom: 2px solid lightcyan;
+    border-radius: 4px;
+    background-image: url(Images/icon2.png);
+    background-position: 1vw -2vh;
+    background-repeat: no-repeat;
+    background-size: 8em;
+    text-align: center;
+ }
+
+.dropdown2-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown2-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown2-content a:hover {background-color: lemonchiffon;}
+
+.dropdown2:hover .dropdown2-content {
+  display: block;
+}
+
+.dropdown2:hover .dropbtn2 {
+  background-color: rgb(80,80,80);
+}
+@media screen and (max-width:855px)
+{
+  .dropbtn2 {
+    padding: 16px;
+   }
+    .dropdown2
+    {
+      float:none;
+      display: inline-block;
+    }
+}
+@media screen and (max-width: 1106px){
+  .heading{
+   background-image: none;
+}
+}
