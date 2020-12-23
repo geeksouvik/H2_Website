@@ -26,7 +26,7 @@ def gallery(request):
 
 def legend(request):
     all_categorys = Legend_Category.objects.all()
-    all_legends = Legends.objects.all()
+    all_legends = Legends.objects.order_by("-year")
     context = { 'all_categorys' : all_categorys, 'all_legends' : all_legends}
     return render(request, 'hostel2/legend.html', context)
 
