@@ -26,7 +26,7 @@ h1{
 	color: #ddd;
 	font-size: 5em;
 	font-family: serif;
-        font-style : italic;
+  font-style : bold !important;
 	letter-spacing: 0.01em;
 }
 h1 span{

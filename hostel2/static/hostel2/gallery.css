@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 #bg{
          background-image: url("Images/img.jpg");
          background-position: center;
@@ -7,15 +8,18 @@
 
       .title {
          text-align: center;
-         color: #333;
-         font-weight: bolder;
-         font-size: 70px;
-         text-shadow: 3px 3px lightblue;
+         color: #ff9063;
+         font-size: 4rem !important;
+         text-shadow: 3px 3px #353535;
+         font-family: 'Luckiest Guy', cursive;
       }
 
       #subhead {
-         text-shadow: 3px 3px rgb(2, 141, 165);
-         font-size: 50px;
+        
+         font-size: 3rem;
+         font-family: 'Luckiest Guy', cursive;
+         color: #fff37f;
+         text-shadow: 3px 3px #353535;
       }
 
 

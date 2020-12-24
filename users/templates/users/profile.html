@@ -5,7 +5,7 @@
 {% block body %}
 
   <link rel="stylesheet" type="text/css" href="{% static 'users/profile.css' %}">
-
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
 <div class="container"> <section class="profile_container">
   <div class="profile_img_section">
@@ -13,28 +13,18 @@
   </div>
 
   <div class="profile_desc_section">
-    <h2 style="font-weight: bolder; font-family: Lucida Calligraphy; font-size: 50px; color: rgb(241, 226, 8);">{{ user.username }}</h2>
-    <h3 style="font-weight: bolder; color: aqua"><b>Email: &nbsp; </b>{{ user.email }}</h3>
-    <h3 style="font-weight: bolder; color: aqua;"><b>Roll No: &nbsp; </b>{{ user.profile.roll_no }}</h3>
-    <h3 style="font-weight: bolder; color: aqua;"><b>Room No: &nbsp; </b>{{ user.profile.room_no }}</h3>
+    <h2 style="font-weight: bolder; font-family: 'Acme', sans-serif; font-size: 50px; color: white; text-shadow: 3px 3px 3px rgb(9, 240, 240);">Hi, {{ user.username }}</h2>
+    <h3 style="font-weight: bolder; color: white;"><b>Email: &nbsp; </b>{{ user.email }}</h3>
+    <h3 style="font-weight: bolder; color: white;"><b>Roll No: &nbsp; </b>{{ user.profile.roll_no }}</h3>
+    <h3 style="font-weight: bolder; color: white;"><b>Room No: &nbsp; </b>{{ user.profile.room_no }}</h3>
 
-    <p class="description" style="background-color: aqua;
-                                  border-radius: 5px; padding: 5px 15px;
-                                  margin-right: 7.5px;
-                                  margin-bottom: 10px;
-                                  color: rgb(2, 83, 83);">
-                                  {{ user.profile.interests }}</p>
+    <p class="description" style="font-weight: bolder; color:white; font-size: 24px;"><b>Interests : &nbsp; </b>{{ user.profile.interests }}</p>
     
-    <h3 style="font-weight: bolder; color: aqua;"><b>GC Participation: &nbsp; </b>{{ user.profile.gc_participation }}</h3>
-    </div>
-
-
-</section>
-<hr>
-<div class="container">
-  <a class="btn btn-outline-success" href="{% url 'profile_update' %}">Edit Profile</a>
-</div>
-</div>
+    <h3 style="font-weight: bolder; color: white;"><b>GC Participation: &nbsp; </b>{{ user.profile.gc_participation }}</h3>
+    <hr>
+    <a class="btn btn-outline-danger" style="background-color: red; color: white; margin-left: 6rem; margin-right: 6rem;" href="{% url 'profile_update' %}">Edit Profile</a>
+  </div>
+  </div>
  
 
  {% endblock body %}

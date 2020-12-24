@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 body,
 		html {
 			margin: 0;
@@ -34,12 +35,13 @@ body,
 		}
 
 		#form-title{
-			color: #fff;
+			color: black !important;
+			font-family: 'Luckiest Guy', cursive;
 		}
 		.login_btn {
 			width: 100%;
 			background: #33ccff !important;
-			color: white !important;
+			color: black !important;
 		}
 		.login_btn:focus {
 			box-shadow: none !important;
@@ -62,5 +64,12 @@ body,
 
 
 
+.text{
+	color: black !important;
 
+}
 
+.text2
+{
+	font-family: 'Luckiest Guy', cursive;
+}

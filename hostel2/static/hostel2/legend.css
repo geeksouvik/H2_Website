@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
  * {
       box-sizing: border-box;
       text-align: center;
@@ -13,15 +14,18 @@
     }
 
     #head {
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      text-shadow: 100rem;
-      color: rgb(147, 238, 94);
-      text-decoration: underline;
+      text-align: center;
+      color: #ff9063;
+      font-size: 4rem !important;
+      font-family: 'Luckiest Guy', cursive;
+      text-shadow: 3px 3px #353535;
+
     }
 
     #subhead {
       font-family: cursive;
-      color: rgb(241, 179, 44);
+      color: yellow;
+      font-weight: bold;
 
     }
 

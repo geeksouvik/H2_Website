@@ -1,6 +1,5 @@
- 
 body {
-  background: url("Images/Among_trees_6.jpg") 100% fixed;
+  background: url("images/bg2.jpg") 100% fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,4 +148,3 @@ h2 {
       margin-left: 33px;
     }
   }
-  
