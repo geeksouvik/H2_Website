@@ -18,7 +18,18 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = ['username', 'email']
 
+COLOR_CHOICES = (
+    ('Green','GREEN'),
+    ('Blue', 'BLUE'),
+    ('Red','RED'),
+    ('Orange','ORANGE'),
+    ('Black','BLACK'),
+)
+
+
 class ProfileUpdateForm(forms.ModelForm):
+    interests = forms.MultipleChoiceField(choices=COLOR_CHOICES, widget=forms.CheckboxSelectMultiple)
     class Meta:
         model = Profile
         fields = ['image', 'roll_no', 'room_no', 'interests']
+

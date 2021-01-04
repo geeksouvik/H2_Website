@@ -17,10 +17,21 @@
     <h3 style="font-weight: bolder; color: white;"><b>Email: &nbsp; </b>{{ user.email }}</h3>
     <h3 style="font-weight: bolder; color: white;"><b>Roll No: &nbsp; </b>{{ user.profile.roll_no }}</h3>
     <h3 style="font-weight: bolder; color: white;"><b>Room No: &nbsp; </b>{{ user.profile.room_no }}</h3>
-
-    <p class="description" style="font-weight: bolder; color:white; font-size: 24px;"><b>Interests : &nbsp; </b>{{ user.profile.interests }}</p>
-    
     <h3 style="font-weight: bolder; color: white;"><b>GC Participation: &nbsp; </b>{{ user.profile.gc_participation }}</h3>
+    <h3 style="font-weight: bolder; color: white;"><b>Interests: &nbsp; </b></h3>
+    <h3 style="font-weight: bolder; color: white;">&nbsp;
+      {% for i in user.profile.interests %}
+       <div style="padding: 8px; background-color: aqua; display: inline; color: rgb(0, 32, 32); border-radius: 6px; font-size: 24px;">
+        {{ i }}
+       </div>  &nbsp;
+      {% endfor %}
+    </h3>
+    <h3 style="font-weight: bolder; color: white;"><b>Awards: &nbsp; </b>{{ user.profile.awards }}</h3>
+    <h3 style="font-weight: bolder; color: white;"><b>E-certificates: &nbsp; </b>
+      <a href="{{ user.profile.e_certificates.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 50px; height: 50px;" src="/media/awards_1.jpg" />
+      </a>
+    </h3>
     <hr>
     <a class="btn btn-outline-danger" style="background-color: red; color: white; margin-left: 6rem; margin-right: 6rem;" href="{% url 'profile_update' %}">Edit Profile</a>
   </div>

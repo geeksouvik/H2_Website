@@ -6,7 +6,6 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 
 
-
 def registerPage(request):
     if request.user.is_authenticated:
         return redirect('home_page')
@@ -66,3 +65,4 @@ def profile_update(request):
     }
 
     return render(request, 'users/profile_update.html', context)
+

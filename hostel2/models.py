@@ -14,7 +14,7 @@ class Legend_Category(models.Model):
 class Legends(models.Model):
     type = models.ForeignKey(Legend_Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=150)
-    year = models.IntegerField(max_length=150)
+    year = models.IntegerField()
 
     def __str__(self):
         return self.name
