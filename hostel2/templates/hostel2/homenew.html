@@ -3,6 +3,8 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'hostel2/homenew.css'%}">
 <link rel="stylesheet" href="{% static 'hostel2/text.css'%}">
+
+
  {% endblock head %}
 
 
@@ -22,7 +24,7 @@
 
 {% for update in updates%}
 
-<marquee direction="right" style="color: cornsilk;">Updates : <a style="color: aliceblue;" href="">{{update.name}}</a></marquee>
+<marquee direction="right" style="color: cornsilk;">Updates : <a class="update" style="color: aliceblue;" href="">{{update.name}}</a></marquee>
 {% endfor %}
 <div class="container">
   <div class="animate two">

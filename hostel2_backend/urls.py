@@ -13,7 +13,7 @@ urlpatterns = [
     path('profile/', user_views.profile, name = 'profile'),
     path('profile_update/', user_views.profile_update, name = 'profile_update'),
     path('login/', user_views.loginPage, name = 'login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name = 'hostel2/homenew.html'), name = 'logout')
+    path('logout/', user_views.logoutPage, name = 'logout')
 ]
 
 if settings.DEBUG:

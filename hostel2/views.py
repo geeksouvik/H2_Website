@@ -9,7 +9,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import *
-
+from .forms import AlumniForm
 
 def base(request):
     return render(request, 'hostel2/landingpage.html')
@@ -23,6 +23,20 @@ def home(request):
 
 def gallery(request):
     return render(request, 'hostel2/gallery.html')
+
+def alumni(request):
+    a_form = AlumniForm()
+    if request.method == 'POST':
+        a_form = AlumniForm(request.POST)
+        if a_form.is_valid():
+            a_form.save()
+            messages.success(request, f'You testimony has been submitted!')
+
+    return render(request, 'hostel2/alumni.html',{ 'a_form' : a_form})
+
+
+
+
 
 def legend(request):
     all_categorys = Legend_Category.objects.all()

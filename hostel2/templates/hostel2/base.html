@@ -8,53 +8,50 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static 'hostel2/navbar.css'%}">
  {% block head %}
  {% endblock head %}
+    <div class="nav mb-0 pr-1">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <a class="navbar-brand" style="color: white;">The Wild Ones</a>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div id="uncheck" class="nav-links ml-auto">
+    <a class="text-primary mobile-view" ></a>
+    <a href="{% url 'home_page' %}"  >Home</a>
+    <a href="{% url 'legend' %}">Legends</a>
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'alumni' %}">Alumni</a>
+    <a  href="https://gymkhana.iitb.ac.in/~hostel2/certificate.php">E-Certificates</a>
+    <a href="{% url 'contactus' %}">Council</a>
+      {% if user.is_authenticated %}
+      <a  href="{% url 'profile' %}">Profile</a>
+      <a  href="{% url 'logout' %}">Logout</a>
+      {% else %}
+      <a  href="{% url 'login' %}">Login</a>
+      {% endif %}
+
+
+</div>
+</div>
 </head>
+
 <body id="bg">
-<nav class="navbar navbar-expand-lg navbar-sticky navbar-dark mb-3" style="background:#285a84; border-radius: 0.8em; top: 0.6vh; left: 0.6vw;
-    z-index: 100; ">
-        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:white;">
-            <span class="navbar-toggler-icon" style="color:white;"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="{% url 'home_page' %}">Home</a>
-                </li>
-                <li id="dropdown2" class="nav-item dropdown2 ">
-                    <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{% url 'legend' %}">Legends</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="https://gymkhana.iitb.ac.in/~hostel2/certificate.php">E-Certificates</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{% url 'contactus' %}">Council</a>
-                </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item ">
-                   <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-                </li>
-                <li class="nav-item ">
-                   <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item ">
-                   <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
+
+
    {% if messages %}
         {% for message in messages %}
             <div class="alert alert-success">

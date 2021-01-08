@@ -1,0 +1,119 @@
+{% extends "hostel2/base.html" %}
+
+
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'hostel2/alumni.css'%}">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+{% endblock head %}
+
+{% block body %}
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<section class="pt-5 pb-5">
+			<div class="container">
+				<h2 class="text-center">What other say for us</h2>
+				<hr class="midline">
+				<h5 class="text-center mb-5">Our team created best opportunities for your business.</h5>
+			  	<div class="card col-md-12 mt-2">
+			      	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+			        	<div class="w-100 carousel-inner mb-5" role="listbox">
+			          		<div class="carousel-item active">
+			            		<div class="bg"></div>
+			            		<div class="row">
+				            		<div class="col-md-6">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="{% static 'hostel2/icon.jpeg'%}" alt="" class="rounded-circle img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>Micheal Smith - <span>Web Developer</span></h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues that I've been experiencing since a recent vasectomy.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+				            		<div class="col-md-6">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="{% static 'hostel2/icon.jpeg'%}" alt="" class="rounded-circle img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                  <h2>Helena Doe - <span>Architect</span></h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues that I've been experiencing since a recent vasectomy.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+			            		</div>
+			          		</div>
+			          		<div class="carousel-item">
+			            		<div class="bg"></div>
+			              			<div class="row">
+				            		<div class="col-md-6 col-12">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="{% static 'hostel2/icon.jpeg'%}" alt="" class="rounded-circle img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>John Doe - <span>Ceo Mobile company</span></h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues that I've been experiencing since a recent vasectomy.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+				            		<div class="col-md-6 col-12">
+				            			<div class="carousel-caption">
+					              			<div class="row">
+								                <div class="col-sm-3 col-4 align-items-start">
+								                  	<img src="{% static 'hostel2/icon.jpeg'%}" alt="" class="rounded-circle img-fluid">
+								                </div>
+								                <div class="col-sm-9 col-8">
+								                <h2>Helena Doe - <span>Architect</span></h2>
+								                  <small>Well incremented. Comes with recommended workout. I'm using it to help with bladder leakage issues that I've been experiencing since a recent vasectomy.</small>
+								                  <small class="smallest mute">- willi</small>
+								                </div>
+					              			</div>
+					            		</div>
+				            		</div>
+			            		</div>
+			          		</div>
+
+			    		</div>
+				        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				          <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+				          <span class="sr-only">Previous</span>
+				        </a>
+				        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				          <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+				          <span class="sr-only">Next</span>
+				        </a>
+			  		</div>
+				</div>
+			</div>
+		</section>
+
+{% load crispy_forms_tags %}
+<div style="background-color: white; margin-left: 15%; margin-right: 15%; padding: 2%; margin-top:5%">
+  <div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            {{ a_form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Sumbit</button>
+
+        </div>
+	</form>
+  </div>
+</div>
+{% endblock body %}

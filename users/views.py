@@ -42,6 +42,10 @@ def loginPage(request):
         context = {}
         return render(request, 'users/login.html', context)
 
+def logoutPage(request):
+	logout(request)
+	return redirect('home_page')
+
 @login_required
 def profile(request):
     return render(request, 'users/profile.html')

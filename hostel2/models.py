@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class Updates(models.Model):
     name = models.CharField(max_length=150,primary_key=True,default = 'No New Update')
     def __str__(self):
@@ -137,6 +139,18 @@ class EventsCouncil(models.Model):
     left = models.BooleanField(default=True)
 
 
+
+    def __str__(self):
+        return self.name
+
+
+
+class AlumniTestimony(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.CharField(max_length=150)
+    year = models.IntegerField()
+    branch = models.CharField(max_length=150)
+    testimony = models.TextField(max_length=5000)
 
     def __str__(self):
         return self.name
