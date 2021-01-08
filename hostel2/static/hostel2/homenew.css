@@ -90,6 +90,7 @@ body {
 }
 
 .bike-1, .bike-2 {
+
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/bike.png) 0 100% no-repeat;
   z-index: 1;
   position: absolute;
@@ -102,6 +103,7 @@ body {
 }
 
 .bike-2 {
+
   animation: parallax_bike linear 15s infinite both;
 }
 
