@@ -151,6 +151,7 @@ class AlumniTestimony(models.Model):
     year = models.IntegerField()
     branch = models.CharField(max_length=150)
     testimony = models.TextField(max_length=5000)
+    pic = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.name

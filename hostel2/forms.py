@@ -12,9 +12,10 @@ class AlumniForm(forms.ModelForm):
     year = forms.IntegerField()
     branch = forms.CharField()
     testimony = forms.CharField()
+    pic = forms.ImageField()
 
 
 
     class Meta:
         model = AlumniTestimony
-        fields = ['name', 'email', 'year', 'branch','testimony' ]
+        fields = ['name', 'email', 'year', 'branch','testimony','pic' ]
