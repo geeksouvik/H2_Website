@@ -1,9 +1,11 @@
 from django.views import generic
-from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.views.generic import CreateView,UpdateView,DeleteView,ListView,DetailView
 from django.urls import reverse_lazy
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import View
+from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -58,3 +60,69 @@ def contactus(request):
     sports_council = SportsCouncil.objects.all()
     context = { 'admin_council' : admin_council, 'web_council' : web_council, 'maint_council':maint_council,'mess_council':mess_council ,'tech_council':tech_council, 'cult_council':cult_council,'events_council':events_council,'sports_council':sports_council }
     return render(request, 'hostel2/contactus_test.html', context)
+
+
+def updates(request):
+    context = {
+      'posts': Post.objects.all()
+    }
+    return render(request, 'hostel2/update.html', context)
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'hostel2/update.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 3
+
+
+class UserPostListView(ListView):
+    model = Post
+    template_name = 'hostel2/user_posts.html'
+    context_object_name = 'posts'
+    paginate_by = 3
+
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Post.objects.filter(author=user).order_by('-date_posted')
+
+
+class PostDetailView(DetailView):
+    model = Post
+
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    success_url = '/'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+
