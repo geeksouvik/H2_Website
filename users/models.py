@@ -10,8 +10,11 @@ class Profile(models.Model):
     gc_participation = models.CharField(default = 'None', max_length = 1000)
     interests = models.CharField(max_length=100, default = '', blank=True)
     awards = models.CharField(default = 'None', max_length = 150)
-    e_certificates = models.ImageField(default = 'default_2.jpg', upload_to = 'profile_pics')
-
+    num_e_certificates = models.IntegerField(default = '0')
+    
+    {% for i in user.profile.num_e_certificates %}
+         e_certificate_i = models.ImageField(default = 'default_2.jpg', upload_to = 'profile_pics')
+    {% endfor %}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
