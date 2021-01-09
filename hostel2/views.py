@@ -27,7 +27,7 @@ def gallery(request):
 def alumni(request):
     a_form = AlumniForm()
     if request.method == 'POST':
-        a_form = AlumniForm(request.POST)
+        a_form = AlumniForm(request.POST, request.FILES)
         if a_form.is_valid():
             a_form.save()
             messages.success(request, f'You testimony has been submitted!')
