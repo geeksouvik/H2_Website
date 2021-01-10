@@ -10,7 +10,7 @@
 {% endblock head %}
 
 {% block body %}
-
+<h1 class="title">Testimonials</h1>
 <section id="testim" class="testim">
 <!--         <div class="testim-cover"> -->
             <div class="wrap">
@@ -61,14 +61,16 @@
             </div>
 <!--         </div> -->
     </section>
-
+<div >
+    <h3>We would like to hear from you!</h3>
+</div>
 {% load crispy_forms_tags %}
 <div style="background-color: white; margin-left: 15%; margin-right: 15%; padding: 2%; margin-top:5%">
   <div class="container">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Profile Info</legend>
+            <legend class="border-bottom mb-4">Alumni Info</legend>
             {{ a_form|crispy }}
         </fieldset>
         <div class="form-group">

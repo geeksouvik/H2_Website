@@ -97,10 +97,11 @@
 
     @media screen and (max-width: 862px) {
       .button {
-        width: 40%;
+        width: 50%;
         padding: 10px 20px;
       }
     }
+
 
     @media screen and (max-width: 600px) {
       #head {
@@ -108,25 +109,31 @@
       }
 
       #subhead {
-        font-size: 15px;
+        font-size: 20px;
       }
 
-      .button {
-        width: 50%;
-        padding: 10px 20px;
-      }
+
     }
 
-    @media screen and (max-width: 476px) {
+    @media screen and (max-width: 485px) {
       .expanded {
         padding: 5px;
         width: 70%;
         left: 15%;
         font-size: 15px;
       }
+       .button {
+        width: 70%;
+        padding: 5px 15px;
+      }
     }
 
     @media screen and (max-width: 350px) {
+       .button {
+        width: 90%;
+        padding: 5px 15px;
+      }
+
       .expanded {
         padding: 3px;
         width: 70%;
