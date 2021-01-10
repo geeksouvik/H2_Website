@@ -29,12 +29,15 @@ body {
     height: auto;
     font-size: 16px;
     font-family: Dubai-Light;
-		background: rgba(30,30,30);
+	    background-image: url("Images/img.jpg");
+         background-position: center;
+         background-size: cover;
+         background-attachment: fixed;
 }
 .testim {
 		width: 100%;
-		position: absolute;
-		top: 50%;
+		position: relative;
+		top: 30vh;
 		-webkit-transform: translatey(-50%);
 		-moz-transform: translatey(-50%);
 		-ms-transform: translatey(-50%);
