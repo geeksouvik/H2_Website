@@ -18,18 +18,38 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = ['username', 'email']
 
-COLOR_CHOICES = (
-    ('Green','GREEN'),
-    ('Blue', 'BLUE'),
-    ('Red','RED'),
-    ('Orange','ORANGE'),
-    ('Black','BLACK'),
+SPORTS_CHOICES = (
+    ('Cricket','CRICKET'),
+    ('Hockey', 'HOCKEY'),
+    ('Football','FOOTBALL'),
+    ('Swimming','SWIMMING'),
+    ('Badminton','BADMINTON'),
+    ('Athletics','ATHLETICS'),
+    ('Weight Lifting','WEIGHT LIFTING'),
+    ('Tennis','TENNIS'),
+    ('Basketball','BASKETBALL'),    
+)
+
+CULT_CHOICES = (
+    ('Dance','DANCE'),
+    ('Singing', 'SINGING'),
+    ('Instruments','INSTRUMENTS'),
+    ('Dramatics','DRAMATICS'),
+    ('Fashion','FASHION'),
+)
+
+TECH_CHOICES = (
+    ('CP','CP'),
+    ('Robotics', 'ROBOTICS'),
+    ('Classical Maths & Physics','CLASSICAL MATHS & PHYSICS'),
 )
 
 
 class ProfileUpdateForm(forms.ModelForm):
-    interests = forms.MultipleChoiceField(choices=COLOR_CHOICES, widget=forms.CheckboxSelectMultiple)
+    interests_sports = forms.MultipleChoiceField(choices=SPORTS_CHOICES, widget=forms.CheckboxSelectMultiple)
+    interests_cult = forms.MultipleChoiceField(choices=CULT_CHOICES, widget=forms.CheckboxSelectMultiple)
+    interests_tech = forms.MultipleChoiceField(choices=TECH_CHOICES, widget=forms.CheckboxSelectMultiple)
     class Meta:
         model = Profile
-        fields = ['image', 'roll_no', 'room_no', 'interests']
+        fields = ['image', 'roll_no', 'room_no', 'interests_sports', 'interests_cult', 'interests_tech']
 

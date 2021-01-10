@@ -8,18 +8,27 @@ class Profile(models.Model):
     roll_no = models.CharField(default = 'None', max_length = 9)
     room_no = models.IntegerField(default = '0',)
     gc_participation = models.CharField(default = 'None', max_length = 1000)
-    interests = models.CharField(max_length=100, default = '', blank=True)
+    interests_sports = models.CharField(max_length=100, default = '', blank=True)
+    interests_cult = models.CharField(max_length=100, default = '', blank=True)
+    interests_tech = models.CharField(max_length=100, default = '', blank=True)
     awards = models.CharField(default = 'None', max_length = 150)
     num_e_certificates = models.IntegerField(default = '0')
-    
-    {% for i in user.profile.num_e_certificates %}
-         e_certificate_i = models.ImageField(default = 'default_2.jpg', upload_to = 'profile_pics')
-    {% endfor %}
+    e_certificate_1 = models.ImageField(default = 'default_2.jpg',upload_to = 'profile_pics')
+    e_certificate_2 = models.ImageField(default = 'default_2.jpg',upload_to = 'profile_pics')
+    e_certificate_3 = models.ImageField(default = 'default_2.jpg',upload_to = 'profile_pics')
+    e_certificate_4 = models.ImageField(default = 'default_2.jpg',upload_to = 'profile_pics')
+    e_certificate_5 = models.ImageField(default = 'default_2.jpg',upload_to = 'profile_pics')
 
+    
+ 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        if self.interests:
-            self.interests= eval(self.interests)
+        if self.interests_tech:
+            self.interests_sports= eval(self.interests_sports)
+            self.interests_cult= eval(self.interests_cult)
+            self.interests_tech= eval(self.interests_tech)
+
+
  
 
     def __str__(self):
@@ -34,3 +43,5 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
