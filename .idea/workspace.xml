@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="" />
+    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/stylesmoke.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/stylesmoke.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/landingpage.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
