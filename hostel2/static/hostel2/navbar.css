@@ -152,17 +152,4 @@ hr.rounded {
     overflow-y: auto;
   }
 }
-    @media screen and (max-width: 550px) {
-  .nav>.nav-header>.nav-title>a {
-    left: 38vw;
-    position: absolute;
-  }
-}
-    @media screen and (max-width: 340px) {
-  .nav>.nav-header>.nav-title>a {
-    left: 35vw;
-    position: absolute;
-  }
-}
-
 

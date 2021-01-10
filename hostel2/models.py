@@ -158,13 +158,6 @@ class AlumniTestimony(models.Model):
     def __str__(self):
         return self.name
 
-<<<<<<< HEAD
-
-##################3 BLOG ####################
-
-
-=======
->>>>>>> b5655ff9393267571f48b30e887ca2fb74792088
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -176,7 +169,4 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
-<<<<<<< HEAD
 
-=======
->>>>>>> b5655ff9393267571f48b30e887ca2fb74792088
