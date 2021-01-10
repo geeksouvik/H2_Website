@@ -19,7 +19,9 @@
 </head>
 
 <body id="bg">
-    <div class="nav mb-0 pr-1">
+
+
+<div class="nav mb-0 pr-1">
   <input type="checkbox" id="nav-check">
   <div class="nav-header">
     <div class="nav-title">
@@ -39,7 +41,7 @@
     <a href="{% url 'legend' %}">Legends</a>
     <a href="{% url 'gallery' %}">Gallery</a>
     <a href="{% url 'alumni' %}">Alumni</a>
-    <a href="{% url 'activities' %}">Activities</a>
+    <a href="{% url 'blog-home' %}">Activities</a>
     <a  href="https://gymkhana.iitb.ac.in/~hostel2/certificate.php">E-Certificates</a>
     <a href="{% url 'contactus' %}">Council</a>
       {% if user.is_authenticated %}
@@ -48,9 +50,7 @@
       {% else %}
       <a  href="{% url 'login' %}">Login</a>
       {% endif %}
-
-
-</div>
+  </div>
 </div>
 
    {% if messages %}
