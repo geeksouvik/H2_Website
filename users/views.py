@@ -1,10 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
-
 
 def registerPage(request):
     if request.user.is_authenticated:
@@ -43,8 +42,8 @@ def loginPage(request):
         return render(request, 'users/login.html', context)
 
 def logoutPage(request):
-	logout(request)
-	return redirect('home_page')
+    logout(request)
+    return redirect('home_page')
 
 @login_required
 def profile(request):
@@ -69,4 +68,3 @@ def profile_update(request):
     }
 
     return render(request, 'users/profile_update.html', context)
-

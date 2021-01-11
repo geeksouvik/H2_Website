@@ -1,0 +1,39 @@
+  
+* {
+     box-sizing: border-box;
+     text-align: center;
+     align-items: center;
+   }
+
+   #bg{
+      background-image: url("Images/Among_trees_1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+   }
+
+
+.description{
+  color: #42f5ef;
+}
+
+.jumbotron{
+  background: #212F3C !important;
+}
+
+.heading{
+  font-size: 2em;
+  color: #e5f233;
+  font-family: 'Fredoka One', cursive;
+}
+
+/* .Mainline{
+  padding-top: 10px;
+  font-family: 'Rubik Mono One', sans-serif;
+  border-radius: 5px;
+  color: #e5f233;
+} */
+
+.for-center{
+  margin-top: 60px;
+}

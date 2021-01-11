@@ -1,4 +1,3 @@
-  
 {% extends "hostel2/base.html" %}
 {% load crispy_forms_tags %}
 {% load static %}
@@ -19,17 +18,39 @@
     <h3 style="font-weight: bolder; color: white;"><b>Room No: &nbsp; </b>{{ user.profile.room_no }}</h3>
     <h3 style="font-weight: bolder; color: white;"><b>GC Participation: &nbsp; </b>{{ user.profile.gc_participation }}</h3>
     <h3 style="font-weight: bolder; color: white;"><b>Interests: &nbsp; </b></h3>
-    <h3 style="font-weight: bolder; color: white;">&nbsp;
-      {% for i in user.profile.interests %}
-       <div style="padding: 8px; background-color: aqua; display: inline; color: rgb(0, 32, 32); border-radius: 6px; font-size: 24px;">
+    <h3 style="font-weight: bolder; color: white;">
+      {% for i in user.profile.interests_sports %}
+       <div class="btn" style=" display: inline; background-color: aqua; color: rgb(0, 32, 32); border-radius: 6px; ">
+        {{ i }}
+       </div>  &nbsp;
+      {% endfor %}
+      {% for i in user.profile.interests_cult %}
+       <div class="btn" style=" display: inline; background-color: aqua; color: rgb(0, 32, 32); border-radius: 6px; font-size: 24px;">
+        {{ i }}        
+       </div>  &nbsp;
+      {% endfor %}
+      {% for i in user.profile.interests_tech %}
+       <div class="btn" style=" display: inline; background-color: aqua; color: rgb(0, 32, 32); border-radius: 6px; font-size: 24px;">
         {{ i }}
        </div>  &nbsp;
       {% endfor %}
     </h3>
     <h3 style="font-weight: bolder; color: white;"><b>Awards: &nbsp; </b>{{ user.profile.awards }}</h3>
     <h3 style="font-weight: bolder; color: white;"><b>E-certificates: &nbsp; </b>
-      <a href="{{ user.profile.e_certificates.url }}" target="_blank" style="padding: 0%;">
-        <img style="width: 50px; height: 50px;" src="/media/awards_1.jpg" />
+      <a href="{{ user.profile.e_certificate_1.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 45px; height: 45px;" src="/media/awards_1.jpg" />
+      </a>
+      <a href="{{ user.profile.e_certificate_2.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 45px; height: 45px;" src="/media/awards_1.jpg" />
+      </a>
+      <a href="{{ user.profile.e_certificate_3.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 45px; height: 45px;" src="/media/awards_1.jpg" />
+      </a>
+      <a href="{{ user.profile.e_certificate_4.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 45px; height: 45px;" src="/media/awards_1.jpg" />
+      </a>
+      <a href="{{ user.profile.e_certificate_5.url }}" target="_blank" style="padding: 0%;">
+        <img style="width: 45px; height: 45px;" src="/media/awards_1.jpg" />
       </a>
     </h3>
     <hr>

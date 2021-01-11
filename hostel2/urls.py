@@ -9,7 +9,7 @@ urlpatterns = [
     path('contactus/', views.contactus , name="contactus"),
     path('legend/', views.legend , name="legend"),
     path('alumni/', views.alumni , name="alumni"),
-
+    path('documents/', views.info, name='info-page'),
     path('activities/', PostListView.as_view() , name="blog-home"),
     path('activities/user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('activities/post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
