@@ -1,6 +1,5 @@
  * {
       box-sizing: border-box;
-      text-align: center;
       align-items: center;
     }
 body {
@@ -264,6 +263,9 @@ body {
     }
 
   .adjust{
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
+.colorchange{
+  color: #000000 !important;
+}
