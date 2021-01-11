@@ -16,16 +16,18 @@
     #head {
       text-align: center;
       color: #ff9063;
-      font-size: 4rem !important;
-      font-family: 'Luckiest Guy', cursive;
+      font-size: 6vw ;
+      font-family: 'Yeon Sung', cursive;
       text-shadow: 3px 3px #353535;
+
 
     }
 
     #subhead {
-      font-family: cursive;
+      font-family: 'Yeon Sung', cursive;
       color: yellow;
       font-weight: bold;
+      font-size: 2vw;
 
     }
 
@@ -100,20 +102,16 @@
         width: 50%;
         padding: 10px 20px;
       }
+      #subhead{
+      font-size:3vw;
+      }
+      #head{
+      font-size: 8vw;
+      }
     }
 
 
-    @media screen and (max-width: 600px) {
-      #head {
-        font-size: 25px;
-      }
 
-      #subhead {
-        font-size: 20px;
-      }
-
-
-    }
 
     @media screen and (max-width: 485px) {
       .expanded {
@@ -125,6 +123,9 @@
        .button {
         width: 70%;
         padding: 5px 15px;
+      }
+      #head{
+      font-size: 10vw;
       }
     }
 
@@ -140,47 +141,10 @@
         left: 15%;
         font-size: 10px;
       }
+      #subhead{
+      font-size:4vw;
+      }
+
     }
-
-
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      padding: 1em 2em;
-      background: rgb(243, 29, 29);
-      margin-right: 1em;
-      margin-left: 1em;
-      margin-top: 1em;
-      margin-bottom: 0em;
-      color: black;
-      border-top-right-radius: 2em;
-      border-bottom-left-radius: 2em;
-      box-shadow: 5px 3px 8.37px rgba(193, 93, 79, .2);
-    }
-
-    footer a:link,
-    footer a:visited {
-      color: white;
-      font-weight: 900;
-      text-decoration: underline;
-      text-decoration-color: #479BBE;
-    }
-
-    footer a:hover {
-      color: #479BBE;
-      text-decoration-color: white;
-    }
-    .footer {
-    display: block;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-
-
 
 

@@ -6,12 +6,29 @@
    }
 
    #bg{
-      background-image: url("Images/Among_trees_1.jpg");
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
+	background: rgba(30,30,30);
    }
 
+   #head {
+      text-align: center;
+      color: #ff9063;
+      font-size: 6vw ;
+      font-family: 'Yeon Sung', cursive;
+      text-shadow: 3px 3px #353535;
+}
+    @media screen and (max-width: 770px) {
+
+      #head{
+      font-size: 8vw;
+      }
+    }
+
+        @media screen and (max-width: 600px) {
+
+      #head{
+      font-size: 9vw;
+      }
+    }
 
 .description{
   color: #42f5ef;
