@@ -342,34 +342,6 @@ p{
   border-radius: 50%;
 }
 
-.nav-item {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: "Lato", sans-serif;
-    text-transform: uppercase;
-}
-
-.nav-link {
-    font-size: 15px;
-    display: block;
-    padding: .5rem 1rem;
-    font-weight: 600; 
-    border-bottom: solid #479BBE; 
-    border-radius: 0.5em;
-    color: black !important;
-}
-
-.navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.nav-link:hover {
-  background:#479BBE !important;
-  color: white;
-  border-color:  #479BBE;
-}
-
 .dropdown2:hover>.dropdown-content {
     position: relative;
     display: block;
