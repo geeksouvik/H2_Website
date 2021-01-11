@@ -1,5 +1,11 @@
-{% extends "hostel2/block.html" %}
+{% extends "hostel2/base.html" %}
+ {% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hostel2/main.css' %}">
+{% endblock %}
   {% block content %}
+
+<h1 class="title">Activities and Updates</h1>
 {% for post in posts %}
 <article class="media content-section">
   <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
