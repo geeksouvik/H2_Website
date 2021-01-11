@@ -58,6 +58,11 @@ def contactus(request):
     return render(request, 'hostel2/contactus_test.html', context)
 
 
+############## contracts and documents ################
+
+def info(request):
+    return render(request, 'hostel2/info.html' )
+
 ############ Blog ####################
 
 def blog(request):
