@@ -1,20 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
+body{
+	margin: 0;
+	padding: 0;
 }
 
-html,
-body {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
+#bg{
+    background-image: url("Images/land.png");
+         background-position: center;
+         background-size: cover;
+         background-attachment: fixed;
+  }
+
+h1{
+    color: yellow;
+	margin: 0;
+	padding: 0;
+	position: absolute;;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;;
+
+	font-size: 6vw;
+	font-family: 'Rubik Mono One', sans-serif;
+  font-style : bold !important;
+	letter-spacing: 0.01em;
+}
+h1 span{
+	opacity: 1;
+	display: inline-block;
+	animation: animate 1s linear forwards;
+}
+.img{
+width:9vw;
+height: auto;
+}
+@media screen and (max-width: 600px) {
+       h1 {
+       font-size: 7vw;
+      }
+      .img{
+      width: 15vw;
+      position: center;
+      }
 }
 
-body {
-  background: #FFF;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-}
+
+
 
 .buttons {
   display: flex;
@@ -22,8 +53,8 @@ body {
       flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 80vw;
+  height: auto;
   margin: 0 auto;
 /*   padding: 2em 0em; */
 }
@@ -39,36 +70,21 @@ body {
   width: 240px;
 }
 
-h1 {
-  text-align: left;
-  color: #444;
-  letter-spacing: 0.05em;
-  margin: 0 0 0.4em;
-  font-size: 1em;
-}
-
-p {
-  text-align: left;
-  color: #444;
-  letter-spacing: 0.05em;
-  font-size: 0.8em;
-  margin: 0 0 2em;
-}
 
 
 .btn {
-  letter-spacing: 0.1em;
+
   cursor: pointer;
-  font-size: 30px;
+  font-size: 3vw;
   font-weight: 600;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-  line-height: 55px;
-  max-width: 180px;
+
+  max-width: 20vw;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
+
 }
 .btn:hover {
   text-decoration: none;
