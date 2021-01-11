@@ -10,14 +10,13 @@ html {
   box-sizing: border-box;
 }
 
-.heading h1
-{
+.heading h1{
   text-align: center;
-  text-shadow: 3.5px 3.5px grey;
-  font-family: 'Oswald' !important;
+  text-shadow: 3px 3px #353535;
+  font-family: 'Yeon Sung', cursive !important;
   font-weight: lighter;
-  font-size: 70px;
-  color: white;
+  font-size: 5vw;
+  color: #ff9063;
   padding-left: 1px;
   padding-right: 1px;
   display: inline-block;
@@ -494,7 +493,7 @@ footer a:hover {
 @media screen and (max-width:500px)
 {
   .heading h1{
-    font-size:60px;
+    font-size: 8vw;
 
   }
 }
