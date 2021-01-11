@@ -11,7 +11,7 @@ class AlumniForm(forms.ModelForm):
     email = forms.EmailField()
     year = forms.IntegerField()
     branch = forms.CharField()
-    testimony = forms.CharField(widget=forms.Textarea)
+    testimony = forms.CharField()
     pic = forms.ImageField()
 
 

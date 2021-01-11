@@ -18,26 +18,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 {% load static %}
-<link rel="stylesheet" href="{% static 'hostel2/landingpage.css'%}">
+<link rel="stylesheet" href="{% static 'hostel2/button.css'%}">
+<link rel="stylesheet" href="{% static 'hostel2/stylesmoke.css'%}">
 </head>
 <body id="bg">
 <div id="bg">
 
-      <h1 >
-        <img src="{% static 'hostel2/icon.jpeg' %}" class="img" >
+      <h1 style="color: yellow; font-family: 'Rubik Mono One', sans-serif; font-size: 5rem;text-align: center;">
+        <img src="{% static 'hostel2/icon.jpeg' %}" width="80" height="80" >
         THE WILD ONES
 
 <br>
 <br>
         <div class="buttons">
                 <a href="{% url 'home_page' %}" class="btn effect01" ><span>Home</span></a>
-
+            </div>
           </div>
 
       </h1>
-</div>
 
 
+    </div>
 
 
 </body>
