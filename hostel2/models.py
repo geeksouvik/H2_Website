@@ -36,6 +36,7 @@ class AdminCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/',default='' )
 
     def __str__(self):
         return self.name
@@ -51,6 +52,7 @@ class WebCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -66,6 +68,7 @@ class TechCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -81,6 +84,7 @@ class MaintCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -96,6 +100,7 @@ class CultCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -111,6 +116,7 @@ class MessCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -126,6 +132,7 @@ class SportsCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
@@ -141,6 +148,7 @@ class EventsCouncil(models.Model):
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
+    manifesto = models.FileField(upload_to='manifesto/', default='')
 
     def __str__(self):
         return self.name
