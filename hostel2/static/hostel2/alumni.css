@@ -42,7 +42,7 @@ body {
 .testim {
 		width: 100%;
 		position: relative;
-		top: 30vh;
+		top: 40vh;
 		-webkit-transform: translatey(-50%);
 		-moz-transform: translatey(-50%);
 		-ms-transform: translatey(-50%);
@@ -625,4 +625,29 @@ body {
 		line-height: 25px;
 	}
 
+}
+
+@media screen and (max-width:855px){
+  .testim{
+    top: 60vh !important;
+  }
+}
+
+@media screen and (max-width:400px){
+  .testim{
+    top: 73vh !important;
+  }
+}
+
+.aditya {
+    text-align: center;
+    color: #ff9063;
+    font-size: 2rem;
+    text-shadow: 3px 3px #353535;
+    font-family: 'Yeon Sung', cursive;
+}
+@media screen and (max-width: 460px) {
+    .aditya{
+     font-size: 1.3rem;}
+     }
 }
