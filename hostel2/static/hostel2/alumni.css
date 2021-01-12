@@ -39,6 +39,20 @@ body {
          text-shadow: 3px 3px #353535;
          font-family: 'Luckiest Guy', cursive;
       }
+            .aditya {
+         text-align: center;
+         color: #ff9063;
+         font-size: 2rem;
+         text-shadow: 3px 3px #353535;
+         font-family: 'Yeon Sung', cursive;
+      }
+     @media screen and (max-width: 460px) {
+     .aditya{
+     font-size: 1.3rem;}
+     }
+
+     }
+
 .testim {
 		width: 100%;
 		position: relative;
