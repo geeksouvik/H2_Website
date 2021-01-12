@@ -5,6 +5,7 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'hostel2/alumni.css'%}">
+<link rel="stylesheet" href="{% static 'hostel2/footer.css'%}">
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 {% endblock head %}
@@ -93,7 +94,7 @@
     <h1 class="aditya">We would like to hear from you!</h1>
 </div>
 {% load crispy_forms_tags %}
-<div style="background-color: white; margin-left: 15%; margin-right: 15%; padding: 2%; margin-top:0%">
+<div style="background-color: white; margin-left: 15%; margin-right: 15%; padding: 2%; margin-top:0%; margin-bottom: 5%;">
   <div class="container">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -108,7 +109,26 @@
 	</form>
   </div>
 </div>
+ <footer class="footer-distributed">
 
+    <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        
+
+    </div>
+
+    <div class="footer-left">
+
+        <h1 class = "priyansh" > Hostel 2, IIT Bombay</h1>
+        
+
+        <p> &copy; Web Council 2020-2021</p>
+    </div>
+
+</footer>
 <script type="text/javascript">
 	// vars
 'use strict'
