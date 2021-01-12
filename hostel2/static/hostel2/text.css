@@ -8,7 +8,7 @@
 
 body
 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif !important;
 	font-size: 14px;
 	color: #999999;
 	word-wrap:break-word;
@@ -24,7 +24,7 @@ ul
 	list-style: none;
 }
 
-.container {
+.container-x {
 	width: 50%;
 	margin: auto;
 	font-weight: 900;
