@@ -107,9 +107,9 @@
                     <div class="card-body" style="border-radius: 0.5rem; background-color: #efe7fb;">
                       <h6  style="text-align: center; font-weight: bolder;">Interests</h6>
                       <p >(Select your interest by editing your profile)</p>
-                      <div class="dropdown">
-                        <button class="dropbtn">Sports</button>
-                        <div class="dropdown-content">
+                      <div class="dropdownx">
+                        <button class="dropbtnx">Sports</button>
+                        <div class="dropdownx-content">
                           {% for i in user.profile.interests_sports %}
                             <a href="#">{{i}}</a>
                           {% endfor %}
@@ -119,9 +119,9 @@
 <br>
 
                       
-                        <div class="dropdown">
-                            <button class="dropbtn">Culturals</button>
-                            <div class="dropdown-content">
+                        <div class="dropdownx">
+                            <button class="dropbtnx">Culturals</button>
+                            <div class="dropdownx-content">
                           {% for i in user.profile.interests_cult %}
                             <a href="#">{{i}}</a>
                           {% endfor %}
@@ -131,9 +131,9 @@
 <br>
 <br>
 
-                          <div class="dropdown">
-                            <button class="dropbtn" >Tech</button>
-                            <div class="dropdown-content">
+                          <div class="dropdownx">
+                            <button class="dropbtnx" >Tech</button>
+                            <div class="dropdownx-content">
                           {% for i in user.profile.interests_tech %}
                             <a href="#">{{i}}</a>
                           {% endfor %}
