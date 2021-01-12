@@ -92,7 +92,7 @@ body{
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #fff;
     transition: all 300ms linear;
 }
 .navbar-light .navbar-toggler-icon:after, 
@@ -100,7 +100,7 @@ body{
   width: 24px;
   position: absolute;
   height: 1px;
-  background-color: #000;
+  background-color: #fff;
   top: 0;
   left: 0;
   content: '';
@@ -387,7 +387,8 @@ body.hero-anime #switch{
 
 .dropdown-item {
   padding: 3px 15px;
-  color: #212121;
+  color: #fff;
+  text-align: center;
   border-radius: 2px;
     transition: all 200ms linear;
 }
@@ -453,7 +454,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* #Media
 ================================================== */
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   h1{
     font-size: 38px;
   }
@@ -521,4 +522,19 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 {
   margin-left: 2%;
   margin-right: 2%;
+}
+
+@media (max-width: 770px) {
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+
 }

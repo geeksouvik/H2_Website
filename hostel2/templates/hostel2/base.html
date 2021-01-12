@@ -26,8 +26,9 @@
    
       <div class="row leftrightadjust">
         <div class="col-12">
-          <nav class="navbar navbar-expand-md navbar-light"> 
-            <a class="navbar-brand" style="color: #fff">The Wild Ones</a>
+          <nav class="navbar navbar-expand-md navbar-light">
+              <img src="{%static "hostel2/h2logo.png"%}" width="50px">
+            <a class="navbar-brand" style="color: #fff" href={% url 'base'  %}>The Wild Ones</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,9 +43,6 @@
                 </li>
                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                   <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="https://gymkhana.iitb.ac.in/~hostel2/certificate.php">E-Certificates</a>
                 </li>
                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                   <a class="nav-link" href="{% url 'contactus' %}">Council</a>
