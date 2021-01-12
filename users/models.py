@@ -4,7 +4,7 @@ from PIL import Image
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default = 'default.jpg', upload_to = 'profile_pics')
+    image = models.ImageField(default = 'avatar7.png', upload_to = 'profile_pics')
     roll_no = models.CharField(default = 'None', max_length = 9)
     room_no = models.IntegerField(default = '0',)
     gc_participation = models.CharField(default = 'None', max_length = 1000)
