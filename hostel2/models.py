@@ -34,8 +34,8 @@ class AdminCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -49,8 +49,8 @@ class WebCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -64,8 +64,8 @@ class TechCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -79,8 +79,8 @@ class MaintCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -94,8 +94,8 @@ class CultCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -109,8 +109,8 @@ class MessCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -124,8 +124,8 @@ class SportsCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
@@ -139,8 +139,8 @@ class EventsCouncil(models.Model):
     picture = models.ImageField(upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
-
-
+    manifestoExists = models.BooleanField(default=False)
+    socialmedia = models.CharField(max_length=150,default='#')
 
     def __str__(self):
         return self.name
