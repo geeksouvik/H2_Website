@@ -2,6 +2,7 @@
  {% block head %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'users/register.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  {% endblock head %}
 
@@ -64,10 +65,10 @@
 
         //Query All input fields
         var form_fields = document.getElementsByTagName('input')
-        form_fields[2].placeholder='Username..';
-        form_fields[3].placeholder='Email..';
-        form_fields[4].placeholder='Enter password...';
-        form_fields[5].placeholder='Re-enter Password...';
+        form_fields[1].placeholder='Username..';
+        form_fields[2].placeholder='Email..';
+        form_fields[3].placeholder='Enter password...';
+        form_fields[4].placeholder='Re-enter Password...';
 
 
         for (var field in form_fields){

@@ -7,6 +7,7 @@ from .models import Profile
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
+
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
@@ -14,9 +15,11 @@ class UserRegisterForm(UserCreationForm):
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
+
     class Meta:
         model = User
         fields = ['username', 'email']
+
 
 SPORTS_CHOICES = (
     ('Cricket','CRICKET'),
@@ -27,7 +30,7 @@ SPORTS_CHOICES = (
     ('Athletics','ATHLETICS'),
     ('Weight Lifting','WEIGHT LIFTING'),
     ('Tennis','TENNIS'),
-    ('Basketball','BASKETBALL'),    
+    ('Basketball','BASKETBALL'),
 )
 
 CULT_CHOICES = (
@@ -46,9 +49,9 @@ TECH_CHOICES = (
 
 
 class ProfileUpdateForm(forms.ModelForm):
-    interests_sports = forms.MultipleChoiceField(choices=SPORTS_CHOICES, widget=forms.CheckboxSelectMultiple)
-    interests_cult = forms.MultipleChoiceField(choices=CULT_CHOICES, widget=forms.CheckboxSelectMultiple)
-    interests_tech = forms.MultipleChoiceField(choices=TECH_CHOICES, widget=forms.CheckboxSelectMultiple)
+    interests_sports = forms.MultipleChoiceField(choices=SPORTS_CHOICES, widget=forms.CheckboxSelectMultiple,required=False)
+    interests_cult = forms.MultipleChoiceField(choices=CULT_CHOICES, widget=forms.CheckboxSelectMultiple,required=False)
+    interests_tech = forms.MultipleChoiceField(choices=TECH_CHOICES, widget=forms.CheckboxSelectMultiple,required=False)
     class Meta:
         model = Profile
-        fields = ['image', 'roll_no', 'room_no', 'interests_sports', 'interests_cult', 'interests_tech']
+        fields = ['image', 'roll_no', 'room_no', 'interests_sports', 'interests_cult', 'interests_tech','year','department']

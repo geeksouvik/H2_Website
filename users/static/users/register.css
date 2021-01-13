@@ -9,7 +9,7 @@ body,
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    color: aquamarine;
+
 		}
 
 
@@ -72,4 +72,8 @@ body,
 .text2
 {
 	font-family: 'Luckiest Guy', cursive;
+}
+
+ul, li{
+color: red;
 }
