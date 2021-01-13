@@ -121,4 +121,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     post = self.get_object()
     if self.request.user == post.author:
       return True
-    return False  
+    return False
+
+def error_404_view(request,exception):
+    return render(request, '404.html')
