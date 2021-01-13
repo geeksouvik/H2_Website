@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="" />
+    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2_backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2_backend/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
