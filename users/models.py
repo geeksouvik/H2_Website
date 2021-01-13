@@ -7,6 +7,8 @@ class Profile(models.Model):
     image = models.ImageField(default = 'avatar7.png', upload_to = 'profile_pics')
     roll_no = models.CharField(default = 'None', max_length = 9)
     room_no = models.IntegerField(default = '0',)
+    department = models.CharField(default = 'Update your department', max_length = 1000)
+    year = models.CharField(default='Update your year', max_length=1000)
     gc_participation = models.CharField(default = 'None', max_length = 1000)
     interests_sports = models.CharField(max_length=100, default = '', blank=True)
     interests_cult = models.CharField(max_length=100, default = '', blank=True)

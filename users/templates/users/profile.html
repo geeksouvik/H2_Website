@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'users/profile_new.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
-<h1 id="headx"> Contract and Constitution</h1>
+<h1 id="head"> Profile</h1>
 <div class="container"  >
     <div class= "main-body" >
     
@@ -24,8 +24,8 @@
                     <img src="{{user.profile.image.url}}" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{user.username}}</h4>
-                      <p  style="font-weight: bolder; text-align: center;">2nd Year <br>
-                      Chemical Engineering</p>
+                      <p  style="font-weight: bolder; text-align: center;">{{user.profile.year}}<br>
+                      {{user.profile.department}}</p>
                       
                       <button style="background-color:aqua; border-radius: 0.25rem; "><a href="{% url 'profile_update' %}">Edit Profile</a></button>
                     </div>

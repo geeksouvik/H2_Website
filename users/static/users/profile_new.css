@@ -8,6 +8,14 @@ body{
     padding: 15px;
     margin-top: 30px;
 }
+    #head {
+      text-align: center;
+      color: #ff9063;
+      font-size: 6vw ;
+      font-family: 'Yeon Sung', cursive;
+      text-shadow: 3px 3px #353535;
+     }
+
 .card1 {
     position: relative;
     display: flex;
