@@ -16,17 +16,17 @@
       font-family: 'Yeon Sung', cursive;
       text-shadow: 3px 3px #353535;
 }
-    @media screen and (max-width: 770px) {
+@media screen and (max-width: 770px) {
 
-      #head{
-      font-size: 8vw;
+    #headx{
+      font-size: 8vw !important;
       }
     }
 
-        @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
-      #head{
-      font-size: 9vw;
+      #headx{
+      font-size: 9vw !important;
       }
     }
 

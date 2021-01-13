@@ -387,7 +387,7 @@ body.hero-anime #switch{
 
 .dropdown-item {
   padding: 3px 15px;
-  color: #fff;
+  color: #212121;
   text-align: center;
   border-radius: 2px;
     transition: all 200ms linear;
@@ -492,7 +492,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .dropdown-menu {
     padding: 0 !important;
-    background-color: transparent;
+    background-color: transparent !important;
     box-shadow: none;
     transition: all 200ms linear;
   }
@@ -535,6 +535,10 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     list-style: none;
     align-items: center;
     text-align: center;
+}
+
+.dropdown-item {
+  color: #fff!important;
 }
 
 }
