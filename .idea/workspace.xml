@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/users/static/users/password_reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/password_reset_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/password_reset_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/password_reset_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2_backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel2_backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2_backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,5 +97,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609965343579" />
+    <state x="47" y="145" key="search.everywhere.popup" timestamp="1610727920968">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="47" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610727920968" />
   </component>
 </project>
