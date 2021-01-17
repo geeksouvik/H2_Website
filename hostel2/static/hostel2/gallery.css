@@ -9,7 +9,7 @@
       .title {
          text-align: center;
          color: #ff9063;
-         font-size: 6vw ;
+         font-size: 3rem !important;
          text-shadow: 3px 3px #353535;
          font-family: 'Yeon Sung', cursive;
       }
@@ -490,18 +490,13 @@
       #subhead{
       font-size:5vw;
       }
-     .title{
-      font-size: 8vw;
-      }
+
     }
 
 
     @media screen and (max-width: 570px) {
 
-      .title{
-      font-size: 10vw;
-      text-shadow: 2px 2px #353535;
-      }
+
            #subhead{
       font-size:6vw;
       text-shadow: 2px 2px #353535;

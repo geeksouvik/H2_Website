@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'hostel2.apps.Hostel2Config',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'bootstrap4',

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 body{
 	margin: 0;
 	padding: 0;
@@ -21,7 +23,7 @@ h1{
 	text-align: center;;
 
 	font-size: 6vw;
-	font-family: 'Rubik Mono One', sans-serif;
+	font-family: 'Playfair Display', serif;
   font-style : bold !important;
 	letter-spacing: 0.01em;
 }
@@ -35,18 +37,6 @@ width:12vw;
 margin-top: 2rem;
 
 }
-@media screen and (max-width: 1100px) {
-       h1 {
-       font-size: 7vw;
-      }
-      .img{
-      width: 25vw;
-      margin-top: 11rem;
-      }
-}
-
-
-
 
 .buttons {
   display: flex;
@@ -140,4 +130,35 @@ margin-top: 2rem;
   left: 120%;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
+}
+
+@media screen and (max-width: 1250px) {
+
+      .img{
+      width: 16vw;
+      margin-top: 7rem;
+      }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+      .img{
+      width: 20vw;
+      margin-top: 9rem;
+      }
+
+}
+@media screen and (max-width: 690px) {
+       h1 {
+       font-size: 7vw;
+      }
+      .img{
+      width: 25vw;
+      margin-top: 11rem;
+      }
+      .btn{
+      font-size: 5vw;
+      max-width: 30vw;
+      }
 }

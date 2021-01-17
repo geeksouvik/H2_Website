@@ -14,31 +14,17 @@ body {
   ul {
     margin: 0;
   }
-        .title {
+ .title {
          text-align: center;
          color: #ff9063;
-         font-size: 5vw;
+         font-size: 3rem !important;
          text-shadow: 3px 3px #353535;
          font-family: 'Yeon Sung', cursive;
       }
 
-      @media screen and (max-width: 820px) {
 
 
-     .title{
-      font-size: 6vw;
-      }
-    }
 
-
-    @media screen and (max-width: 600px) {
-
-      .title{
-      font-size: 9vw;
-      text-shadow: 2px 2px #353535;
-      }
-
-    }
   .bg-steel {
     background-color: #062d4d;
   }
