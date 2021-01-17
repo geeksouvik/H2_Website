@@ -1,4 +1,8 @@
 {% extends "hostel2/base.html" %}
+ {% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hostel2/main.css' %}">
+{% endblock %}
   {% block content %}
 
 <article class="media content-section">
@@ -9,7 +13,7 @@
       <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
       {% if object.author == user %}
       <div>
-        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+        <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
         <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
       </div>
       {% endif %}
@@ -19,6 +23,6 @@
   </div>
 </article>
 
-<a class="btn btn-outline-info" type="submit" href="{% url 'blog-home' %}">Back</a> 
+<a class="btn btn-outline-info mb-4 btn btn-danger colorchange" type="submit" href="{% url 'blog-home' %}">Back</a> 
 
   {% endblock  %}

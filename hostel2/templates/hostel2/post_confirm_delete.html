@@ -1,5 +1,8 @@
-{% extends "hostel2/block.html" %}
-
+{% extends "hostel2/base.html" %}
+ {% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hostel2/main.css' %}">
+{% endblock %}
   {% block content %}
     <div class="content-section">
         <form method="POST">
