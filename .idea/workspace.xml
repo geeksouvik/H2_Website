@@ -19,23 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/alumni.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/alumni.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/landingpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/landingpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/legend.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/legend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/static/hostel2/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/static/hostel2/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/post_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2_backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2_backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-    </list>
+    <list default="true" id="69e7421a-e887-4d80-a157-f9d1af346329" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
