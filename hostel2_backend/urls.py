@@ -5,6 +5,7 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from users.views import VerificationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,8 @@ urlpatterns = [
     path('password-reset-complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
+    path('activate/<uidb64>/<token>', VerificationView.as_view(), name='activate'),
+
 ]
 
 if settings.DEBUG:
