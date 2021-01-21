@@ -26,13 +26,13 @@
 
 {% for council_category in all_council_categories %}
 <div class="mySlides myfade">
-  <h2 style="text-align:center; padding:0px ; margin:2vw; color: gold; background-color:black; border: 2px solid gold; line-height: 1.5 !important;">{{council_category.category}}</h2>
 {% for council in all_council %}
   {% if council.category == council_category %}
+  <h2 class = {{council.headingstyle}}>{{council_category.category}}</h2>
   {% if council.councillor %}
       <div class="row">
         <div class="columnX">
-        <div class="card1">
+        <div class={{council.style}}>
         <img src={{council.picture.url}}>
         <div class="container">
           <h2>{{ council.name }}</h2>
@@ -53,7 +53,7 @@
   {% elif council.left %}
       <div class="row">
         <div class="column">
-        <div class="card1">
+        <div class={{council.style}}>
         <img src={{council.picture.url}}>
         <div class="container">
           <h2>{{ council.name }}</h2>
@@ -72,7 +72,7 @@
   </div>
   {% else %}
         <div class="column">
-        <div class="card1">
+        <div class={{council.style}}>
         <img src={{council.picture.url}}>
         <div class="container">
           <h2>{{ council.name }}</h2>

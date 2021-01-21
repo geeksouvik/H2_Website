@@ -44,6 +44,8 @@ class Council(models.Model):
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
     manifesto = models.FileField(upload_to='manifesto/',blank=True,null=True )
+    style = models.CharField(max_length=150,default='card1')
+    headingstyle = models.CharField(max_length=150,default='adminstyle')
 
     def __str__(self):
         return self.name

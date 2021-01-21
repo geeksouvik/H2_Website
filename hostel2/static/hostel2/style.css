@@ -23,15 +23,7 @@ html {
   margin: 0 0 0 11%;
 }
 
-h2
-{
-  font-size: 40px;
-  font-family: 'Oswald' !important;
-  font-weight: lighter;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-top: 7.5px;
-}
+
 p{
   margin-top: 0px;
 }
@@ -447,4 +439,117 @@ p{
   .heading h1{
     margin: 0 0 0 0 !important;
   }
+}
+
+.adminstyle
+{
+    font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: gold; 
+  background-color:black; 
+  border: 2px solid gold; 
+  line-height: 1.5 !important;
+}
+.webstyle
+{
+    font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #D2B4DE; 
+  background-color:black; 
+  border: 2px solid #D2B4DE; 
+  line-height: 1.5 !important;
+}
+.techstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #A9CCE3; 
+  background-color:black; 
+  border: 2px solid #A9CCE3; 
+  line-height: 1.5 !important;
+}
+.maintstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #5DADE2; 
+  background-color:black; 
+  border: 2px solid #5DADE2; 
+  line-height: 1.5 !important;
+}
+.messstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #A2D9CE; 
+  background-color:black; 
+  border: 2px solid #A2D9CE; 
+  line-height: 1.5 !important;
+}
+.sportsstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #82E0AA; 
+  background-color:black; 
+  border: 2px solid #82E0AA; 
+  line-height: 1.5 !important;
+}
+.cultstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #85C1E9; 
+  background-color:black; 
+  border: 2px solid #85C1E9; 
+  line-height: 1.5 !important;
+}
+.eventstyle
+{
+   font-size: 40px;
+  font-family: 'Oswald' !important;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 7.5px;
+  text-align:center; padding:0px ; 
+  margin:2vw; color: #45B39D; 
+  background-color:black; 
+  border: 2px solid #45B39D; 
+  line-height: 1.5 !important;
 }
