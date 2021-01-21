@@ -26,6 +26,7 @@ class Legends(models.Model):
 
 class Council_Category(models.Model):
     category = models.CharField(max_length=150,primary_key=True)
+    headingstyle = models.CharField(max_length=150,default='adminstyle')
 
     def __str__(self):
         return self.category
@@ -45,7 +46,7 @@ class Council(models.Model):
     socialmedia = models.CharField(max_length=150,default='#')
     manifesto = models.FileField(upload_to='manifesto/',blank=True,null=True )
     style = models.CharField(max_length=150,default='card1')
-    headingstyle = models.CharField(max_length=150,default='adminstyle')
+   
 
     def __str__(self):
         return self.name

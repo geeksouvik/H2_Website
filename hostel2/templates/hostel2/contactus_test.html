@@ -26,9 +26,9 @@
 
 {% for council_category in all_council_categories %}
 <div class="mySlides myfade">
+  <h2 class = {{council_category.headingstyle}}>{{council_category.category}}</h2>
 {% for council in all_council %}
   {% if council.category == council_category %}
-  <h2 class = {{council.headingstyle}}>{{council_category.category}}</h2>
   {% if council.councillor %}
       <div class="row">
         <div class="columnX">
