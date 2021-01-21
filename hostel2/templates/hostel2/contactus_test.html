@@ -24,24 +24,25 @@
 <span class="next round" onclick="plusSlides(1)">&#10095;</span>
 </div>
 
-
+{% for council_category in all_council_categories %}
 <div class="mySlides myfade">
-  <h2 style="text-align:center; padding:0px ; margin:2vw; color: gold; background-color:black; border: 2px solid gold; line-height: 1.5 !important;">Administration Body</h2>
-{% for admin in admin_council %}
-  {% if admin.councillor %}
+  <h2 style="text-align:center; padding:0px ; margin:2vw; color: gold; background-color:black; border: 2px solid gold; line-height: 1.5 !important;">{{council_category.category}}</h2>
+{% for council in all_council %}
+  {% if council.category == council_category %}
+  {% if council.councillor %}
       <div class="row">
         <div class="columnX">
         <div class="card1">
-        <img src={{admin.picture.url}}>
+        <img src={{council.picture.url}}>
         <div class="container">
-          <h2>{{ admin.name }}</h2>
-          <p class="title">&nbsp;{{admin.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{admin.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{admin.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{admin.roomno}}</b></p>
+          <h2>{{ council.name }}</h2>
+          <p class="title">&nbsp;{{council.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{council.email}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{council.contactno}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{council.roomno}}</b></p>
           <div class="buttonbar">
-            <button class="button"><a href="{{admin.socialmedia}}"/> Contact </a></button>
-            {% if admin.manifestoExists %} 
+            <button class="button"><a href="{{council.socialmedia}}"/> Contact </a></button>
+            {% if council.manifestoExists %} 
             <button class="button">Manifesto</button>
             {% endif %}
           </div>
@@ -49,20 +50,20 @@
     </div>
   </div>
 </div>
-  {% elif admin.left %}
+  {% elif council.left %}
       <div class="row">
         <div class="column">
         <div class="card1">
-        <img src={{admin.picture.url}}>
+        <img src={{council.picture.url}}>
         <div class="container">
-          <h2>{{ admin.name }}</h2>
-          <p class="title">&nbsp;{{admin.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{admin.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{admin.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{admin.roomno}}</b></p>
+          <h2>{{ council.name }}</h2>
+          <p class="title">&nbsp;{{council.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{council.email}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{council.contactno}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{council.roomno}}</b></p>
           <div class="buttonbar">
-            <button class="button"><a href="{{admin.socialmedia}}"/> Contact </a></button>
-            {% if admin.manifestoExists %} 
+            <button class="button"><a href="{{council.socialmedia}}"/> Contact </a></button>
+            {% if council.manifestoExists %} 
             <button class="button">Manifesto</button>
             {% endif %}
           </div>
@@ -72,16 +73,16 @@
   {% else %}
         <div class="column">
         <div class="card1">
-        <img src={{admin.picture.url}}>
+        <img src={{council.picture.url}}>
         <div class="container">
-          <h2>{{ admin.name }}</h2>
-          <p class="title">&nbsp;{{admin.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{admin.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{admin.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{admin.roomno}}</b></p>
+          <h2>{{ council.name }}</h2>
+          <p class="title">&nbsp;{{council.post}}</p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{council.email}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{council.contactno}}</b></p>
+          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{council.roomno}}</b></p>
           <div class="buttonbar">
-            <button class="button"><a href="{{admin.socialmedia}}"/> Contact </a></button>
-            {% if admin.manifestoExists %} 
+            <button class="button"><a href="{{council.socialmedia}}"/> Contact </a></button>
+            {% if council.manifestoExists %} 
             <button class="button">Manifesto</button>
             {% endif %}
           </div>
@@ -90,480 +91,11 @@
   </div>
 </div>
   {% endif %}
-{% endfor %}
-</div>
-
-<div class="mySlides myfade">
-  <h2 style="text-align:center; padding:0px; margin:2vw; color:  #D2B4DE; background-color:black; border: 2px solid  #D2B4DE; line-height: 1.5;">Web Council</h2>
-{% for web in web_council %}
-  {% if web.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card2">
-        <img src={{web.picture.url}}>
-        <div class="container">
-          <h2>{{ web.name }}</h2>
-          <p class="title">&nbsp;{{web.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{web.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{web.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{web.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{web.socialmedia}}"/> Contact </a></button>
-            {% if web.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif web.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card2">
-        <img src={{web.picture.url}}>
-        <div class="container">
-          <h2>{{ web.name }}</h2>
-          <p class="title">&nbsp;{{web.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{web.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{web.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{web.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{web.socialmedia}}"/> Contact </a></button>
-            {% if web.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card2">
-        <img src={{web.picture.url}}>
-        <div class="container">
-          <h2>{{ web.name }}</h2>
-          <p class="title">&nbsp;{{web.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{web.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{web.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{web.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{web.socialmedia}}"/> Contact </a></button>
-            {% if web.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
   {% endif %}
 {% endfor %}
 </div>
-
-<div class="mySlides myfade">
-  <h2 style="text-align:center; margin:2vw; padding:0px; color:#A9CCE3; background-color:black; border: 2px solid #A9CCE3; line-height: 1.5;">Technical Council</h2>
-{% for tech in tech_council %}
-  {% if tech.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card3">
-        <img src={{tech.picture.url}}>
-        <div class="container">
-          <h2>{{ tech.name }}</h2>
-          <p class="title">&nbsp;{{tech.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{tech.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{tech.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{tech.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{tech.socialmedia}}"/> Contact </a></button>
-            {% if tech.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif tech.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card3">
-        <img src={{tech.picture.url}}>
-        <div class="container">
-          <h2>{{ tech.name }}</h2>
-          <p class="title">&nbsp;{{tech.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{tech.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{tech.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{tech.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{tech.socialmedia}}"/> Contact </a></button>
-            {% if tech.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card3">
-        <img src={{tech.picture.url}}>
-        <div class="container">
-          <h2>{{ tech.name }}</h2>
-          <p class="title">&nbsp;{{tech.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{tech.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{tech.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{tech.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{tech.socialmedia}}"/> Contact </a></button>
-            {% if tech.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
 {% endfor %}
-</div>
 
-<div class="mySlides myfade">
-  <h2 style="text-align:center; margin:2vw; padding:0px; color: #A2D9CE; background-color:black; border: 2px solid #A2D9CE; line-height: 1.5;">Mess Council</h2>
-{% for mess in mess_council %}
-  {% if mess.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card4">
-        <img src={{mess.picture.url}}>
-        <div class="container">
-          <h2>{{ mess.name }}</h2>
-          <p class="title">&nbsp;{{mess.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{mess.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{mess.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{mess.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{mess.socialmedia}}"/> Contact </a></button>
-            {% if mess.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif mess.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card4">
-        <img src={{mess.picture.url}}>
-        <div class="container">
-          <h2>{{ mess.name }}</h2>
-          <p class="title">&nbsp;{{mess.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{mess.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{mess.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{mess.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{mess.socialmedia}}"/> Contact </a></button>
-            {% if mess.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card4">
-        <img src={{mess.picture.url}}>
-        <div class="container">
-          <h2>{{ mess.name }}</h2>
-          <p class="title">&nbsp;{{mess.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{mess.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{mess.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{mess.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{mess.socialmedia}}"/> Contact </a></button>
-            {% if mess.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
-{% endfor %}
-</div>
-
-<div class="mySlides myfade">
-  <h2 style="text-align:center; margin:2vw; padding:0px; color:#5DADE2; background-color:black; border: 2px solid #5DADE2; line-height: 1.5;">Maintenance Council</h2>
-{% for maint in maint_council %}
-  {% if maint.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card5">
-        <img src={{maint.picture.url}}>
-        <div class="container">
-          <h2>{{ maint.name }}</h2>
-          <p class="title">&nbsp;{{maint.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{maint.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{maint.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{maint.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{maint.socialmedia}}"/> Contact </a></button>
-            {% if maint.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif maint.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card5">
-        <img src={{maint.picture.url}}>
-        <div class="container">
-          <h2>{{ maint.name }}</h2>
-          <p class="title">&nbsp;{{maint.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{maint.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{maint.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{maint.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{maint.socialmedia}}"/> Contact </a></button>
-            {% if maint.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card5">
-        <img src={{maint.picture.url}}>
-        <div class="container">
-          <h2>{{ maint.name }}</h2>
-          <p class="title">&nbsp;{{maint.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{maint.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{maint.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{maint.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{maint.socialmedia}}"/> Contact </a></button>
-            {% if maint.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
-{% endfor %}
-</div>
-
-<div class="mySlides myfade">
-  <h2 style="text-align:center; margin:2vw; padding:0px; color:#82E0AA; background-color:black; border: 2px solid #82E0AA; line-height: 1.5;">Sports Council</h2>
-{% for sports in sports_council %}
-  {% if sports.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card6">
-        <img src={{sports.picture.url}}>
-        <div class="container">
-          <h2>{{ sports.name }}</h2>
-          <p class="title">&nbsp;{{sports.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{sports.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{sports.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{sports.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{sports.socialmedia}}"/> Contact </a></button>
-            {% if sports.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif sports.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card6">
-        <img src={{sports.picture.url}}>
-        <div class="container">
-          <h2>{{ sports.name }}</h2>
-          <p class="title">&nbsp;{{sports.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp;{{sports.email}} </b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp;{{sports.contactno}} </b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{sports.roomno}}</b></p>
-          <p><button class="button"><a href="{{sports.socialmedia}}"/> Contact </a></button></p>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card6">
-        <img src={{sports.picture.url}}>
-        <div class="container">
-          <h2>{{ sports.name }}</h2>
-          <p class="title">&nbsp;{{sports.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{sports.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{sports.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{sports.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{sports.socialmedia}}"/> Contact </a></button>
-            {% if sports.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
-{% endfor %}
-</div>
-
-
-<div class="mySlides myfade">
-    <h2 style="text-align:center; margin:2vw; padding:0px; color: #85C1E9 ; background-color:black; border: 2px solid  #85C1E9 ; line-height: 1.5;">Cultural Council</h2>
-{% for cult in cult_council %}
-  {% if cult.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card7">
-        <img src={{cult.picture.url}}>
-        <div class="container">
-          <h2>{{ cult.name }}</h2>
-          <p class="title">&nbsp;{{cult.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp;{{cult.email}} </b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{cult.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{cult.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{cult.socialmedia}}"/> Contact </a></button>
-            {% if cult.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif cult.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card7">
-        <img src={{cult.picture.url}}>
-        <div class="container">
-          <h2>{{ cult.name }}</h2>
-          <p class="title">&nbsp;{{cult.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{cult.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{cult.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{cult.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{cult.socialmedia}}"/> Contact </a></button>
-            {% if cult.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card7">
-        <img src={{cult.picture.url}}>
-        <div class="container">
-          <h2>{{ cult.name }}</h2>
-          <p class="title">&nbsp;{{cult.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{cult.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{cult.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{cult.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{cult.socialmedia}}"/> Contact </a></button>
-            {% if cult.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
-{% endfor %}
-</div>
-
-<div class="mySlides myfade">
-  <h2 style="text-align:center; margin:2vw; padding:0px; color:#45B39D ; background-color:black; border: 2px solid #45B39D ; line-height: 1.5;">Events Council</h2>
-{% for events in events_council %}
-  {% if events.councillor %}
-      <div class="row">
-        <div class="columnX">
-        <div class="card8">
-        <img src={{events.picture.url}}>
-        <div class="container">
-          <h2>{{ events.name }}</h2>
-          <p class="title">&nbsp;{{events.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp;{{events.email}} </b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{events.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{events.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{events.socialmedia}}"/> Contact </a></button>
-            {% if events.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% elif events.left %}
-      <div class="row">
-        <div class="column">
-        <div class="card8">
-        <img src={{events.picture.url}}>
-        <div class="container">
-          <h2>{{ events.name }}</h2>
-          <p class="title">&nbsp;{{events.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{events.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{events.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{events.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{events.socialmedia}}"/> Contact </a></button>
-            {% if events.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-  {% else %}
-        <div class="column">
-        <div class="card8">
-        <img src={{events.picture.url}}>
-        <div class="container">
-          <h2>{{ events.name }}</h2>
-          <p class="title">&nbsp;{{events.post}}</p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Email: &nbsp; {{events.email}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Phone No: &nbsp; {{events.contactno}}</b></p>
-          <p style="font-size:20px; margin-bottom:5px;"><b>Room No: &nbsp; {{events.roomno}}</b></p>
-          <div class="buttonbar">
-            <button class="button"><a href="{{events.socialmedia}}"/> Contact </a></button>
-            {% if events.manifestoExists %} 
-            <button class="button">Manifesto</button>
-            {% endif %}
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-  {% endif %}
-{% endfor %}
-</div>
 
 
 <div class="arrow">

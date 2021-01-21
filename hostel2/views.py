@@ -43,18 +43,9 @@ def legend(request):
     return render(request, 'hostel2/legend.html', context)
 
 def contactus(request):
-    ##all_council_categorys = Council_Category.objects.all()
-    ##all_council = Council.objects.all()
-    ##context = { 'all_council_categorys' : all_council_categorys, 'all_council' : all_council}
-    admin_council = AdminCouncil.objects.all()
-    web_council = WebCouncil.objects.all()
-    maint_council = MaintCouncil.objects.all()
-    mess_council = MessCouncil.objects.all()
-    tech_council = TechCouncil.objects.all()
-    cult_council = CultCouncil.objects.all()
-    events_council = EventsCouncil.objects.all()
-    sports_council = SportsCouncil.objects.all()
-    context = { 'admin_council' : admin_council, 'web_council' : web_council, 'maint_council':maint_council,'mess_council':mess_council ,'tech_council':tech_council, 'cult_council':cult_council,'events_council':events_council,'sports_council':sports_council }
+    all_council_categories = Council_Category.objects.all()
+    all_council = Council.objects.all()
+    context = { 'all_council_categories' : all_council_categories,'all_council' : all_council}
     return render(request, 'hostel2/contactus_test.html', context)
 
 
