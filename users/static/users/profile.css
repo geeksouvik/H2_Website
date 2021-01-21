@@ -6,15 +6,13 @@ body {
  
  }
 
-    #head {
-      text-align: center;
-      color: #ff9063;
-      font-size: 6vw ;
-      font-family: 'Yeon Sung', cursive;
-      text-shadow: 3px 3px #353535;
-
-
-    }
+  #head {
+         text-align: center;
+         color: #ff9063;
+         font-size: 3rem !important;
+         text-shadow: 3px 3px #353535;
+         font-family: 'Yeon Sung', cursive;
+      }
 
 h2 {
     font-family: "Poppins";
