@@ -130,6 +130,12 @@ MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+CKEDITOR_CONFIGS = {
+    'default':{
+        'width': 0,
+    }
+}
+
 LOGIN_REDIRECT_URL = 'home_page'
 LOGIN_URL = 'login'
 
