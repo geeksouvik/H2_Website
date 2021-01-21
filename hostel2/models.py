@@ -39,7 +39,7 @@ class Council(models.Model):
     roomno = models.CharField(max_length=150,blank=True, default='')
     contactno = models.CharField(max_length=150,blank=True, default='')
     email = models.CharField(max_length=150)
-    picture = models.ImageField(upload_to='images/')
+    picture = models.ImageField(default = 'avatar7.png',upload_to='images/')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)

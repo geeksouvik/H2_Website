@@ -1,10 +1,9 @@
 from django.contrib import admin
 from .models import *
+from import_export.admin import ImportExportModelAdmin
 
-admin.site.register(Updates)
-admin.site.register(Legend_Category)
-admin.site.register(Legends)
-admin.site.register(Council_Category)
-admin.site.register(Council)
-admin.site.register(AlumniTestimony)
-admin.site.register(Post)
+
+@admin.register(Updates,Legend_Category,Legends,Council_Category,Council,AlumniTestimony,Post )
+class ViewAdmin(ImportExportModelAdmin):
+    pass
+
