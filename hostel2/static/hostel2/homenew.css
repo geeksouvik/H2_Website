@@ -58,7 +58,6 @@ body {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/4.png) 0 100% repeat-x;
   z-index: 1;
   position: absolute;
-  margin-top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -70,7 +69,6 @@ body {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/5.png) 0 100% repeat-x;
   z-index: 1;
   position: absolute;
-  margin-top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -82,7 +80,6 @@ body {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/6.png) 0 100% repeat-x;
   z-index: 1;
   position: absolute;
-  margin-top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
