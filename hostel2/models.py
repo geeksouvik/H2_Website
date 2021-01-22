@@ -75,3 +75,10 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
 
+class Testimony(models.Model):
+    name =models.CharField(max_length=100)
+    pic = models.ImageField(default = 'avatar7.png', upload_to = 'testimonial/')
+    content= RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name

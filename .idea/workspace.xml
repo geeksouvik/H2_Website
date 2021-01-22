@@ -25,9 +25,6 @@
       <change beforePath="$PROJECT_DIR$/hostel2/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hostel2/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/alumni.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/alumni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/contactus_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/contactus_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hostel2/templates/hostel2/homenew.html" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/templates/hostel2/homenew.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hostel2/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hostel2/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

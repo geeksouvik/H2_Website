@@ -28,14 +28,16 @@ def gallery(request):
     return render(request, 'hostel2/gallery.html')
 
 def alumni(request):
+    testimony = Testimony.objects.all()
     a_form = AlumniForm()
     if request.method == 'POST':
         a_form = AlumniForm(request.POST)
         if a_form.is_valid():
             a_form.save()
             messages.success(request, f'You testimony has been submitted!')
+    context = {'testimony': testimony}
 
-    return render(request, 'hostel2/alumni.html',{ 'a_form' : a_form})
+    return render(request, 'hostel2/alumni.html',{ 'a_form' : a_form},context)
 
 def legend(request):
     all_categorys = Legend_Category.objects.all()
