@@ -12,8 +12,8 @@
 <div class="dropdown2">
   <button class="dropbtn2">Older H2 Councils &#11206;</button>
   <div class="dropdown2-content">
-  <a href="#">2019-2020</a>
-  <a href="#">2018-2019</a>
+  <a href="https://gymkhana.iitb.ac.in/~hostel2/council/">2019-2020</a>
+  <a href="https://gymkhana.iitb.ac.in/~hostel2/council/index1.html">2018-2019</a>
   </div>
 </div>
 </div>
@@ -33,7 +33,7 @@
       <div class="row">
         <div class="columnX">
         <div class={{council.style}}>
-        <img src={{council.picture.url}}>
+        <img src="{{council.picture}}">
         <div class="container">
           <h2>{{ council.name }}</h2>
           <p class="title">&nbsp;{{council.post}}</p>
@@ -54,7 +54,7 @@
       <div class="row">
         <div class="column">
         <div class={{council.style}}>
-        <img src={{council.picture.url}}>
+        <img src="{{council.picture}}">
         <div class="container">
           <h2>{{ council.name }}</h2>
           <p class="title">&nbsp;{{council.post}}</p>
@@ -73,7 +73,7 @@
   {% else %}
         <div class="column">
         <div class={{council.style}}>
-        <img src={{council.picture.url}}>
+        <img src="{{council.picture}}">
         <div class="container">
           <h2>{{ council.name }}</h2>
           <p class="title">&nbsp;{{council.post}}</p>
@@ -83,7 +83,7 @@
           <div class="buttonbar">
             <button class="button"><a href="{{council.socialmedia}}"/> Contact </a></button>
             {% if council.manifestoExists %} 
-            <button class="button">Manifesto</button>
+            <button class="button"><a href="{{council.socialmedia}}"/> Manifesto </a></button>
             {% endif %}
           </div>
         </div>
@@ -117,9 +117,9 @@
 
     <div class="footer-right">
 
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/h2iitb" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/the_wild_ones_h2" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/hostel2iitbombay/" target="_blank"><i class="fa fa-linkedin"></i></a>
         
 
     </div>

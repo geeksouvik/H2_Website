@@ -13,6 +13,7 @@ from django.utils.decorators import method_decorator
 from .models import *
 from .forms import AlumniForm
 
+
 def base(request):
     return render(request, 'hostel2/landingpage.html')
 
@@ -43,7 +44,7 @@ def legend(request):
     return render(request, 'hostel2/legend.html', context)
 
 def contactus(request):
-    all_council_categories = Council_Category.objects.all()
+    all_council_categories = Council_Category.objects.all().order_by("-order")
     all_council = Council.objects.all()
     context = { 'all_council_categories' : all_council_categories,'all_council' : all_council}
     return render(request, 'hostel2/contactus_test.html', context)

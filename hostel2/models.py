@@ -27,6 +27,7 @@ class Legends(models.Model):
 class Council_Category(models.Model):
     category = models.CharField(max_length=150,primary_key=True)
     headingstyle = models.CharField(max_length=150,default='adminstyle')
+    order= models.IntegerField(max_length=150,default=2)
 
     def __str__(self):
         return self.category
@@ -39,12 +40,12 @@ class Council(models.Model):
     roomno = models.CharField(max_length=150,blank=True, default='')
     contactno = models.CharField(max_length=150,blank=True, default='')
     email = models.CharField(max_length=150)
-    picture = models.ImageField(default = 'avatar7.png',upload_to='images/')
+    picture = models.CharField(max_length=150,default='#')
     councillor = models.BooleanField(default=False)
     left = models.BooleanField(default=True)
     manifestoExists = models.BooleanField(default=False)
     socialmedia = models.CharField(max_length=150,default='#')
-    manifesto = models.FileField(upload_to='manifesto/',blank=True,null=True )
+    manifesto = models.CharField(max_length=150,default='#')
     style = models.CharField(max_length=150,default='card1')
    
 
