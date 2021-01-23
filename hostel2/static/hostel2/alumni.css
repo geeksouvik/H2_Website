@@ -629,16 +629,30 @@ body {
 
 @media screen and (max-width:855px){
   .testim{
-    top: 60vh !important;
+    top: 19em !important;
+  }
+}
+@media screen and (max-width:675px){
+  .testim{
+    top: 23em !important;
   }
 }
 
+@media screen and (max-width:540px){
+  .testim{
+    top: 28.5em !important;
+  }
+}
 @media screen and (max-width:400px){
   .testim{
-    top: 73vh !important;
+    top: 32em !important;
   }
 }
-
+@media screen and (max-width:350px){
+  .testim{
+    top: 38em !important;
+  }
+}
 .aditya {
     text-align: center;
     color: #ff9063;

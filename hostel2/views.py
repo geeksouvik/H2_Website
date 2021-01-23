@@ -35,9 +35,9 @@ def alumni(request):
         if a_form.is_valid():
             a_form.save()
             messages.success(request, f'You testimony has been submitted!')
-    context = {'testimony': testimony}
+    context = {'testimony': testimony,'a_form' : a_form}
 
-    return render(request, 'hostel2/alumni.html',{ 'a_form' : a_form},context)
+    return render(request, 'hostel2/alumni.html',context)
 
 def legend(request):
     all_categorys = Legend_Category.objects.all()
